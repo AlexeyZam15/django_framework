@@ -8,3 +8,6 @@ INFO 2024-01-28 22:15:32,919 basehttp log_message "GET /homework_01/about HTTP/1
 INFO 2024-01-28 22:15:33,225 basehttp log_message "GET /homework_01/about HTTP/1.1" 200 359
 INFO 2024-01-28 22:15:33,482 basehttp log_message "GET /homework_01/about HTTP/1.1" 200 393
 INFO 2024-01-28 22:15:35,912 basehttp log_message "GET /homework_01/ HTTP/1.1" 200 167
+INFO 2024-01-28 22:18:28,092 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-01-28 22:18:31,936 basehttp log_message "GET /homework_01/ HTTP/1.1" 200 167
+INFO 2024-01-28 22:18:34,576 basehttp log_message "GET /homework_01/about HTTP/1.1" 200 441
