@@ -1,0 +1,30 @@
+Watching for file changes with StatReloader
+C:\Users\wolfy\Downloads\django_framework\lecture_01\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /prefix/ HTTP/1.1" 200 13
+"GET /prefix/about HTTP/1.1" 301 0
+"GET /prefix/about/ HTTP/1.1" 200 27
+C:\Users\wolfy\Downloads\django_framework\lecture_01\lecture_01\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Index page accessed
+"GET /prefix/ HTTP/1.1" 200 13
+Error in about page: division by zero
+Traceback (most recent call last):
+  File "C:\Users\wolfy\Downloads\django_framework\lecture_01\myapp\views.py", line 15, in about
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
+"GET /prefix/about/ HTTP/1.1" 200 27
+C:\Users\wolfy\Downloads\django_framework\lecture_01\lecture_01\settings.py changed, reloading.
+INFO 2024-01-28 11:28:40,211 autoreload 64776 69520 Watching for file changes with StatReloader
+INFO 2024-01-28 11:30:19,033 autoreload 64776 69520 C:\Users\wolfy\Downloads\django_framework\lecture_01\lecture_01\settings.py changed, reloading.
+INFO 2024-01-28 11:30:20,071 autoreload 65776 69112 Watching for file changes with StatReloader
+ERROR 2024-01-28 11:31:40,090 views 65776 59980 Error in about page: division by zero
+Traceback (most recent call last):
+  File "C:\Users\wolfy\Downloads\django_framework\lecture_01\myapp\views.py", line 15, in about
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
+INFO 2024-01-28 11:31:40,093 basehttp 65776 59980 "GET /prefix/about/ HTTP/1.1" 200 27
+INFO 2024-01-28 11:31:43,606 views 65776 59980 Index page accessed
+INFO 2024-01-28 11:31:43,608 basehttp 65776 59980 "GET /prefix/ HTTP/1.1" 200 13
