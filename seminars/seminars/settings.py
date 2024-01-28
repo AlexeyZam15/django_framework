@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'seminar_01',
+    'homework_01',
 ]
 
 MIDDLEWARE = [
@@ -149,6 +150,12 @@ LOGGING = {
             'filename': './log/seminar_01/django.log',
             'formatter': 'verbose',
             'encoding': 'utf-8',
+        },
+        'homework_01_file': {
+            'class': 'logging.FileHandler',
+            'filename': './log/homework_01/django.log',
+            'formatter': 'verbose',
+            'encoding': 'utf-8',
         }
     },
     'loggers': {
@@ -158,6 +165,11 @@ LOGGING = {
         },
         'seminar_01': {
             'handlers': ['console', 'seminar_01_file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'homework_01': {
+            'handlers': ['console', 'homework_01_file'],
             'level': 'DEBUG',
             'propagate': True,
         },
