@@ -28,3 +28,11 @@ ZeroDivisionError: division by zero
 INFO 2024-01-28 11:31:40,093 basehttp 65776 59980 "GET /prefix/about/ HTTP/1.1" 200 27
 INFO 2024-01-28 11:31:43,606 views 65776 59980 Index page accessed
 INFO 2024-01-28 11:31:43,608 basehttp 65776 59980 "GET /prefix/ HTTP/1.1" 200 13
+INFO 2024-01-28 19:46:20,522 autoreload 71940 68508 Watching for file changes with StatReloader
+WARNING 2024-01-28 19:46:23,113 log 71940 46840 Not Found: /
+WARNING 2024-01-28 19:46:23,115 basehttp 71940 46840 "GET / HTTP/1.1" 404 2168
+INFO 2024-01-28 19:46:34,901 views 71940 46840 Index page accessed
+INFO 2024-01-28 19:46:34,902 basehttp 71940 46840 "GET /prefix/ HTTP/1.1" 200 13
+INFO 2024-01-28 19:48:03,947 autoreload 72060 70152 Watching for file changes with StatReloader
+INFO 2024-01-28 19:48:10,506 views 72060 68424 Index page accessed
+INFO 2024-01-28 19:48:10,509 basehttp 72060 68424 "GET /prefix/ HTTP/1.1" 200 13
