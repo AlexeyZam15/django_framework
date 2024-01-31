@@ -1,7 +1,13 @@
-INFO 2024-01-28 18:09:59,372 autoreload run_with_reloader Watching for file changes with StatReloader
-INFO 2024-01-28 18:10:06,643 basehttp log_message "GET /seminar_01/coin/ HTTP/1.1" 200 42
-INFO 2024-01-28 18:10:09,937 basehttp log_message "GET /seminar_01/dice/ HTTP/1.1" 200 33
-INFO 2024-01-28 18:10:10,344 basehttp log_message "GET /seminar_01/dice/ HTTP/1.1" 200 33
-WARNING 2024-01-28 18:10:13,196 log log_response Not Found: /seminar_01/random_hundra
-WARNING 2024-01-28 18:10:13,197 basehttp log_message "GET /seminar_01/random_hundra HTTP/1.1" 404 2875
-INFO 2024-01-28 18:10:15,576 basehttp log_message "GET /seminar_01/random_hundred/ HTTP/1.1" 200 49
+INFO 2024-01-28 22:15:14,233 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-01-28 22:15:26,903 basehttp log_message "GET /homework_01/ HTTP/1.1" 200 167
+INFO 2024-01-28 22:15:29,937 basehttp log_message "GET /homework_01/about HTTP/1.1" 200 475
+INFO 2024-01-28 22:15:31,735 basehttp log_message "GET /homework_01/about HTTP/1.1" 200 285
+INFO 2024-01-28 22:15:32,224 basehttp log_message "GET /homework_01/about HTTP/1.1" 200 291
+INFO 2024-01-28 22:15:32,624 basehttp log_message "GET /homework_01/about HTTP/1.1" 200 320
+INFO 2024-01-28 22:15:32,919 basehttp log_message "GET /homework_01/about HTTP/1.1" 200 408
+INFO 2024-01-28 22:15:33,225 basehttp log_message "GET /homework_01/about HTTP/1.1" 200 359
+INFO 2024-01-28 22:15:33,482 basehttp log_message "GET /homework_01/about HTTP/1.1" 200 393
+INFO 2024-01-28 22:15:35,912 basehttp log_message "GET /homework_01/ HTTP/1.1" 200 167
+INFO 2024-01-28 22:18:28,092 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-01-28 22:18:31,936 basehttp log_message "GET /homework_01/ HTTP/1.1" 200 167
+INFO 2024-01-28 22:18:34,576 basehttp log_message "GET /homework_01/about HTTP/1.1" 200 441
