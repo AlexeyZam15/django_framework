@@ -184,3 +184,51 @@ class Article(models.Model):
     def __str__(self):
         formatted_date = self.date_published.strftime('%d.%m.%Y %H:%M:%S')
         return f"{self.title} {self.content} {formatted_date} {self.author.full_name} {self.category} {self.views} {self.is_published}"
+
+
+"""
+Задание №6
+Создайте модель Комментарий.
+Авторы могут добавлять комментарии к своим и чужим
+статьям. Т.е. у комментария может быть один автор.
+И комментарий относится к одной статье. У модели должны
+быть следующие поля
+○ автор
+○ статья
+○ комментарий
+○ дата создания
+○ дата изменения
+
+Задание №7
+Создайте функции для работы с базой данных:
+○ Поиск всех статей автора по его имени
+○ Поиск всех комментариев автора по его имени
+○ Поиск всех комментариев по названию статьи
+Каждая из трёх функций должна иметь возможность
+сортировки и ограничение выборки по количеству.
+"""
+
+
+class Comment(models.Model):
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    comment = models.TextField()
+    date_created = models.DateTimeField(auto_now_add=True)
+    date_modified = models.DateTimeField(auto_now=True)
+
+    fields = ['comment']
+
+    def __str__(self):
+        format_date_create = self.date_created.strftime('%d.%m.%Y %H:%M:%S')
+        format_date_mod = self.date_modified.strftime('%d.%m.%Y %H:%M:%S')
+        return f"{self.author.full_name} {self.article.title} {self.comment} {format_date_create} {format_date_mod}"
+
+    @staticmethod
+    def get_comments(count=None, args=None, values=None):
+        if args is not None and values is not None:
+            data = Comment.objects.filter(args, values).all()
+        else:
+            data = Comment.objects.all()
+        if count is not None:
+            data = data[:count]
+        return data
