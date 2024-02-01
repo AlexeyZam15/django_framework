@@ -2,6 +2,8 @@ import random
 
 from django.db import models
 
+from datetime import date
+
 """
 Задание 1
 Создайте модель для запоминания бросков монеты: орёл или
@@ -24,7 +26,7 @@ class Coin(models.Model):
         (TAILS, 'Tails'),
     )
     choices = [HEADS, TAILS]
-    side = models.CharField(unique=True, max_length=1, choices=CHOICES)
+    side = models.CharField(max_length=1, choices=CHOICES)
     time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -53,3 +55,132 @@ class Coin(models.Model):
     def get_coins(n):
         """Возвращает n последних монет"""
         return Coin.objects.order_by('-time')[:n]
+
+
+"""
+Задание 3
+Создайте модель Автор. Модель должна содержать
+следующие поля:
+○ имя до 100 символов
+○ фамилия до 100 символов
+○ почта
+○ биография
+○ день рождения
+Дополнительно создай пользовательское поле “полное
+имя”, которое возвращает имя и фамилию.
+"""
+
+
+class Author(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    bio = models.TextField()
+    birth_date = models.CharField(max_length=10)
+
+    fields = ['first_name', 'last_name', 'email', 'bio', 'birth_date']
+
+    @property
+    def full_name(self):
+        return f'{self.first_name} {self.last_name}'
+
+    def __str__(self):
+        return f'{self.full_name} {self.email} {self.bio} {self.birth_date}'
+
+    """CRUD функции"""
+
+    @staticmethod
+    def create_author(first_name, last_name, email, bio, birth_date):
+        return Author.objects.create(first_name=first_name, last_name=last_name, email=email, bio=bio,
+                                     birth_date=birth_date)
+
+    @staticmethod
+    def get_authors():
+        return Author.objects.all()
+
+    @staticmethod
+    def get_author(author_id):
+        return Author.objects.filter(id=author_id).first()
+
+    @staticmethod
+    def update_author(author_id, attr, new_value):
+        author = Author.get_author(author_id)
+        if author is None:
+            return None
+        setattr(author, attr, new_value)
+        author.save()
+
+    @staticmethod
+    def delete_author(author_id):
+        author = Author.get_author(author_id)
+        if author is None:
+            return None
+        author.delete()
+        return author
+
+
+"""
+Задание 4
+Создайте модель Статья (публикация). Авторы из прошлой задачи могут
+писать статьи. У статьи может быть только один автор. У статьи должны быть
+следующие обязательные поля:
+○ заголовок статьи с максимальной длиной 200 символов
+○ содержание статьи
+○ дата публикации статьи
+○ автор статьи с удалением связанных объектов при удалении автора
+○ категория статьи с максимальной длиной 100 символов
+○ количество просмотров статьи со значением по умолчанию 0
+○ флаг, указывающий, опубликована ли статья со значением по умолчанию
+False
+
+Задача 5
+Доработаем задачу 4.
+Создай четыре функции для реализации CRUD в модели
+Django Article (статья).
+*Используйте Django команды для вызова функций.
+"""
+
+
+class Article(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    date_published = models.DateTimeField(auto_now_add=True)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    category = models.CharField(max_length=100)
+    views = models.IntegerField(default=0)
+    is_published = models.BooleanField(default=False)
+
+    fields = ['title', 'content', 'category', 'views']
+
+    @staticmethod
+    def create_article(data):
+        return Article.objects.create(**data)
+
+    @staticmethod
+    def get_articles():
+        return Article.objects.all()
+
+    @staticmethod
+    def get_article(article_id):
+        return Article.objects.filter(id=article_id).first()
+
+    @staticmethod
+    def update_article(article_id, field, value):
+        article = Article.get_article(article_id)
+        if article is None:
+            return None
+        setattr(article, field, value)
+        article.save()
+        return article
+
+    @staticmethod
+    def delete_article(article_id):
+        article = Article.get_article(article_id)
+        if article is None:
+            return None
+        article.delete()
+        return article
+
+    def __str__(self):
+        formatted_date = self.date_published.strftime('%d.%m.%Y %H:%M:%S')
+        return f"{self.title} {self.content} {formatted_date} {self.author.full_name} {self.category} {self.views} {self.is_published}"

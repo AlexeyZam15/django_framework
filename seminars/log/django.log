@@ -12,3 +12,6 @@ INFO 2024-01-28 22:18:28,092 autoreload run_with_reloader Watching for file chan
 INFO 2024-01-28 22:18:31,936 basehttp log_message "GET /homework_01/ HTTP/1.1" 200 167
 INFO 2024-01-28 22:18:34,576 basehttp log_message "GET /homework_01/about HTTP/1.1" 200 441
 INFO 2024-01-31 15:10:16,444 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-01-31 17:29:55,550 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-01-31 17:31:33,123 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-01-31 17:34:19,617 autoreload run_with_reloader Watching for file changes with StatReloader
