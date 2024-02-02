@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'seminar_01',
     'homework_01',
+    'seminar_02',
 ]
 
 MIDDLEWARE = [
@@ -175,3 +176,7 @@ LOGGING = {
         },
     },
 }
+
+USE_L10N = False
+DATE_INPUT_FORMATS = ["%d.%m.%Y"]
+
