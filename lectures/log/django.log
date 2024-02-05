@@ -41,3 +41,131 @@ INFO 2024-01-29 12:13:12,534 autoreload 83156 69768 Watching for file changes wi
 WARNING 2024-01-29 12:13:15,393 log 83156 81288 Not Found: /
 WARNING 2024-01-29 12:13:15,406 basehttp 83156 81288 "GET / HTTP/1.1" 404 2275
 INFO 2024-01-29 12:16:24,289 autoreload 80312 83344 Watching for file changes with StatReloader
+INFO 2024-02-04 23:00:12,423 autoreload 148308 141384 Watching for file changes with StatReloader
+WARNING 2024-02-04 23:00:15,847 log 148308 147052 Not Found: /
+WARNING 2024-02-04 23:00:15,855 basehttp 148308 147052 "GET / HTTP/1.1" 404 2273
+WARNING 2024-02-04 23:00:16,287 log 148308 147052 Not Found: /favicon.ico
+WARNING 2024-02-04 23:00:16,291 basehttp 148308 147052 "GET /favicon.ico HTTP/1.1" 404 2324
+WARNING 2024-02-04 23:00:37,978 log 148308 147052 Not Found: /lec3
+WARNING 2024-02-04 23:00:37,979 basehttp 148308 147052 "GET /lec3 HTTP/1.1" 404 2303
+INFO 2024-02-04 23:00:55,913 basehttp 148308 147052 "GET /lec3/hello HTTP/1.1" 301 0
+INFO 2024-02-04 23:00:55,923 basehttp 148308 147700 "GET /lec3/hello/ HTTP/1.1" 200 26
+INFO 2024-02-04 23:01:05,071 basehttp 148308 147700 "GET /lec3/hello2/ HTTP/1.1" 200 23
+INFO 2024-02-04 23:06:07,643 autoreload 148308 141384 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\urls.py changed, reloading.
+INFO 2024-02-04 23:06:08,933 autoreload 147588 147640 Watching for file changes with StatReloader
+INFO 2024-02-05 14:18:34,499 autoreload 157720 156256 Watching for file changes with StatReloader
+INFO 2024-02-05 14:18:39,728 autoreload 157720 156256 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\urls.py changed, reloading.
+INFO 2024-02-05 14:18:41,023 autoreload 160328 160172 Watching for file changes with StatReloader
+WARNING 2024-02-05 14:19:11,122 log 160328 158880 Not Found: /
+WARNING 2024-02-05 14:19:11,123 basehttp 160328 158880 "GET / HTTP/1.1" 404 2273
+WARNING 2024-02-05 14:19:20,738 log 160328 158880 Not Found: /lec3/posts
+WARNING 2024-02-05 14:19:20,739 basehttp 160328 158880 "GET /lec3/posts HTTP/1.1" 404 3198
+INFO 2024-02-05 14:19:25,307 basehttp 160328 158880 "GET /lec3/posts/2022 HTTP/1.1" 301 0
+INFO 2024-02-05 14:19:25,317 basehttp 160328 160516 "GET /lec3/posts/2022/ HTTP/1.1" 200 19
+INFO 2024-02-05 14:24:24,411 basehttp 160328 160516 "GET /lec3/posts/2022/6 HTTP/1.1" 301 0
+INFO 2024-02-05 14:24:24,427 basehttp 160328 161540 "GET /lec3/posts/2022/6/ HTTP/1.1" 200 27
+INFO 2024-02-05 14:24:57,371 autoreload 160328 160172 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 14:24:58,938 autoreload 161208 161452 Watching for file changes with StatReloader
+INFO 2024-02-05 14:25:02,133 basehttp 161208 157700 "GET /lec3/posts/2022/6/ HTTP/1.1" 200 21
+INFO 2024-02-05 14:26:02,932 autoreload 161208 161452 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 14:26:04,173 autoreload 161464 159472 Watching for file changes with StatReloader
+INFO 2024-02-05 14:26:15,801 autoreload 161464 159472 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 14:26:16,974 autoreload 158976 161208 Watching for file changes with StatReloader
+INFO 2024-02-05 14:26:33,205 autoreload 158976 161208 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 14:26:34,521 autoreload 161060 160340 Watching for file changes with StatReloader
+INFO 2024-02-05 14:28:02,089 basehttp 161060 161680 "GET /lec3/posts/2022/6/python HTTP/1.1" 301 0
+INFO 2024-02-05 14:28:02,103 basehttp 161060 128332 "GET /lec3/posts/2022/6/python/ HTTP/1.1" 200 359
+INFO 2024-02-05 15:25:23,974 autoreload 161060 160340 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 15:25:34,232 autoreload 148152 158480 Watching for file changes with StatReloader
+INFO 2024-02-05 15:25:59,642 autoreload 148152 158480 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 15:26:01,349 autoreload 159220 158280 Watching for file changes with StatReloader
+INFO 2024-02-05 15:28:01,975 autoreload 159220 158280 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 15:28:03,207 autoreload 147640 159596 Watching for file changes with StatReloader
+INFO 2024-02-05 15:28:11,687 autoreload 147640 159596 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\urls.py changed, reloading.
+INFO 2024-02-05 15:28:13,337 autoreload 161468 158808 Watching for file changes with StatReloader
+INFO 2024-02-05 15:28:33,481 autoreload 161468 158808 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\urls.py changed, reloading.
+INFO 2024-02-05 15:28:35,019 autoreload 147336 146636 Watching for file changes with StatReloader
+INFO 2024-02-05 15:28:38,128 basehttp 147336 149112 "GET /lec3/ HTTP/1.1" 200 171
+INFO 2024-02-05 15:33:58,253 autoreload 147336 146636 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 15:33:59,642 autoreload 82444 150512 Watching for file changes with StatReloader
+INFO 2024-02-05 15:34:50,344 autoreload 82444 150512 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 15:34:51,814 autoreload 161368 160068 Watching for file changes with StatReloader
+INFO 2024-02-05 15:39:34,398 autoreload 161368 160068 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\urls.py changed, reloading.
+INFO 2024-02-05 15:39:35,595 autoreload 157772 156464 Watching for file changes with StatReloader
+INFO 2024-02-05 15:39:41,640 basehttp 157772 161536 "GET /lec3/if HTTP/1.1" 301 0
+ERROR 2024-02-05 15:39:42,594 log 157772 151520 Internal Server Error: /lec3/if/
+Traceback (most recent call last):
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: lecture_03/templ_if.html
+ERROR 2024-02-05 15:39:42,597 basehttp 157772 151520 "GET /lec3/if/ HTTP/1.1" 500 80824
+INFO 2024-02-05 15:40:24,723 autoreload 161620 155908 Watching for file changes with StatReloader
+INFO 2024-02-05 15:40:26,564 basehttp 161620 158560 "GET /lec3/if/ HTTP/1.1" 200 287
+INFO 2024-02-05 15:43:28,065 autoreload 161620 155908 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 15:43:29,461 autoreload 146112 159536 Watching for file changes with StatReloader
+INFO 2024-02-05 15:43:36,802 autoreload 146112 159536 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 15:43:38,297 autoreload 154636 149992 Watching for file changes with StatReloader
+INFO 2024-02-05 15:44:56,975 autoreload 154636 149992 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 15:44:58,527 autoreload 155388 161212 Watching for file changes with StatReloader
+INFO 2024-02-05 15:45:20,269 autoreload 155388 161212 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\urls.py changed, reloading.
+INFO 2024-02-05 15:45:21,393 autoreload 160760 153868 Watching for file changes with StatReloader
+INFO 2024-02-05 15:45:43,039 basehttp 160760 82444 "GET /lec3/for HTTP/1.1" 200 925
+INFO 2024-02-05 15:53:39,494 autoreload 160760 153868 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 15:53:40,670 autoreload 161716 153904 Watching for file changes with StatReloader
+INFO 2024-02-05 15:54:31,258 autoreload 161716 153904 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\views.py changed, reloading.
+INFO 2024-02-05 15:54:32,343 autoreload 139800 132288 Watching for file changes with StatReloader
+WARNING 2024-02-05 15:56:13,429 log 139800 150148 Not Found: /lec3/index
+WARNING 2024-02-05 15:56:13,431 basehttp 139800 150148 "GET /lec3/index HTTP/1.1" 404 3709
+INFO 2024-02-05 15:57:02,386 autoreload 139800 132288 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\urls.py changed, reloading.
+INFO 2024-02-05 15:57:03,554 autoreload 160868 161524 Watching for file changes with StatReloader
+INFO 2024-02-05 15:57:16,546 autoreload 160868 161524 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\urls.py changed, reloading.
+INFO 2024-02-05 15:57:17,488 autoreload 148284 155916 Watching for file changes with StatReloader
+INFO 2024-02-05 15:57:38,010 autoreload 148284 155916 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_03\urls.py changed, reloading.
+INFO 2024-02-05 15:57:39,187 autoreload 159892 154160 Watching for file changes with StatReloader
+INFO 2024-02-05 15:57:42,655 basehttp 159892 159512 "GET /lec3/index HTTP/1.1" 301 0
+INFO 2024-02-05 15:57:42,668 basehttp 159892 157608 "GET /lec3/index/ HTTP/1.1" 200 200
+INFO 2024-02-05 15:57:46,492 basehttp 159892 157608 "GET /lec3/about HTTP/1.1" 301 0
+INFO 2024-02-05 15:57:46,503 basehttp 159892 158524 "GET /lec3/about/ HTTP/1.1" 200 208
+INFO 2024-02-05 15:58:47,372 autoreload 159892 154160 C:\Users\wolfy\Downloads\django_framework\lectures\lectures\settings.py changed, reloading.
+INFO 2024-02-05 15:58:48,682 autoreload 151548 159520 Watching for file changes with StatReloader
+INFO 2024-02-05 16:02:20,086 basehttp 151548 160080 "GET /lec3/about/ HTTP/1.1" 200 208
+INFO 2024-02-05 16:02:25,436 basehttp 151548 160080 "GET /lec3/index/ HTTP/1.1" 200 200
+INFO 2024-02-05 16:02:41,182 basehttp 151548 160080 "GET /lec3/index/ HTTP/1.1" 200 260
+INFO 2024-02-05 16:04:33,028 autoreload 151548 159520 C:\Users\wolfy\Downloads\django_framework\lectures\lectures\urls.py changed, reloading.
+INFO 2024-02-05 16:04:34,301 autoreload 161888 159360 Watching for file changes with StatReloader
+INFO 2024-02-05 16:04:48,653 autoreload 161888 159360 C:\Users\wolfy\Downloads\django_framework\lectures\lectures\urls.py changed, reloading.
+INFO 2024-02-05 16:04:50,156 autoreload 160312 154164 Watching for file changes with StatReloader
+INFO 2024-02-05 16:04:52,249 basehttp 160312 161896 "GET / HTTP/1.1" 200 260
+INFO 2024-02-05 20:05:24,544 autoreload 26676 57988 Watching for file changes with StatReloader
+INFO 2024-02-05 20:05:30,167 basehttp 26676 704 "GET / HTTP/1.1" 200 260
+WARNING 2024-02-05 20:05:30,511 log 26676 704 Not Found: /favicon.ico
+WARNING 2024-02-05 20:05:30,512 basehttp 26676 704 "GET /favicon.ico HTTP/1.1" 404 2424
+WARNING 2024-02-05 20:05:43,601 log 26676 704 Not Found: /lec3/author
+WARNING 2024-02-05 20:05:43,603 basehttp 26676 704 "GET /lec3/author HTTP/1.1" 404 4554
+INFO 2024-02-05 20:06:01,249 basehttp 26676 704 "GET /lec3/author/1 HTTP/1.1" 301 0
+INFO 2024-02-05 20:06:01,267 basehttp 26676 56936 "GET /lec3/author/1/ HTTP/1.1" 200 1263
+INFO 2024-02-05 20:06:28,787 basehttp 26676 56936 "GET /lec3/post/10/ HTTP/1.1" 200 640
+INFO 2024-02-05 20:07:08,331 basehttp 26676 56936 "GET /lec3/author/1/ HTTP/1.1" 200 1224
+INFO 2024-02-05 20:07:15,132 basehttp 26676 56936 "GET /lec3/author/5/ HTTP/1.1" 200 1243
+INFO 2024-02-05 20:07:25,459 basehttp 26676 56936 "GET /lec3/author/1/ HTTP/1.1" 200 1224
+INFO 2024-02-05 20:07:40,848 basehttp 26676 56936 "GET /lec3/author/5/ HTTP/1.1" 200 1243
+INFO 2024-02-05 20:07:41,888 basehttp 26676 56936 "GET /lec3/post/50/ HTTP/1.1" 200 676
+INFO 2024-02-05 20:07:49,208 basehttp 26676 56936 "GET /lec3/post/49/ HTTP/1.1" 200 674
+INFO 2024-02-05 20:07:50,910 basehttp 26676 56936 "GET /lec3/post/48/ HTTP/1.1" 200 629
+INFO 2024-02-05 20:07:52,701 basehttp 26676 56936 "GET /lec3/post/47/ HTTP/1.1" 200 697
+INFO 2024-02-05 20:07:54,111 basehttp 26676 56936 "GET /lec3/post/46/ HTTP/1.1" 200 666
