@@ -25,37 +25,5 @@ class Command(BaseCommand):
             self.stdout.write(self.style.ERROR(f'Client with name {client_name} not found'))
             return
         ordered_products = options['products']
-        products = []
-        total_price = 0
-        products_count = {}
-        for product_name, product_count in ordered_products:
-            product = Product.objects.filter(name=product_name).first()
-            if product is None:
-                self.stdout.write(self.style.ERROR(f'Product {product_name} not found'))
-                return
-            product_count = int(product_count)
-            if product_count <= 0:
-                self.stdout.write(self.style.ERROR(f'Count for ordered product must be greater than 0'))
-                return
-            while product.count < product_count:
-                self.stdout.write(self.style.ERROR(f'Not enough products in stock for {product_name}'))
-                return
-            products.append(product)
-            product.count -= product_count
-            products_count[product] = product_count
-            product.save()
-            total_price += product.price * product_count
-        if not products:
-            self.stdout.write(self.style.ERROR('No products in the order'))
-            return
-        order = Order.objects.create(
-            client=client,
-            total_price=total_price,
-        )
-        for product in products:
-            OrderedProduct.objects.create(
-                order=order,
-                product=product,
-                count=products_count[product],
-            )
+        order = Order.create_order(client, ordered_products)
         self.stdout.write(f'{order}')

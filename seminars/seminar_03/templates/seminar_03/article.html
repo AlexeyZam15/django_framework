@@ -1,0 +1,18 @@
+{% extends 'seminar_03/base.html' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+<h3>{{ article.title }}</h3>
+<p>{{ article.content }}</p>
+<p>Автор: {{ article.author.full_name }}</p>
+<p>Категория: {{ article.category }}</p>
+<p>Дата публикации: {{ article.date_published }}</p>
+<p>Просмотры: {{ article.views }}</p>
+<p>Опубликовано:
+    {% if article.is_published %} Да
+    {% else %} Нет
+    {% endif %}</p>
+<a href="{% url 'article_comments' article.id %}">Посмотреть комментарии</a>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'seminar_03/base.html' %}
+
+{% block title %}{{ title }} {% endblock %}
+
+{% block content %}
+<h2> {{ title }} </h2>
+<table class="table">
+    <tr>
+        {% for column in columns %}
+        <th>{{ column }}</th>
+        {% endfor %}
+    </tr>
+    {% for article in articles %}
+    <tr>
+        <td>
+            {% if article.is_published %}<a href="{% url 'article_full' article.id %}">{{ article.title }}</a>
+            {% else %} {{ article.title }}
+            {% endif %}
+        </td>
+        <td> {{ article.date_published }}</td>
+        <td> {{ article.author.full_name }}</td>
+        <td> {{ article.category }}</td>
+        <td> {{ article.views }}</td>
+        <td> {% if article.is_published %} Да
+            {% else %} Нет
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
