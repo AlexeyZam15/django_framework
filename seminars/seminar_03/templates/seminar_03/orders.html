@@ -1,0 +1,23 @@
+{% extends 'seminar_03/base.html' %}
+
+{% block title %}{{ title }} {% endblock %}
+
+{% block content %}
+<h2> {{ title }} </h2>
+<table class="table">
+    <tr>
+        {% for column in columns %}
+        <th>{{ column }}</th>
+        {% endfor %}
+    </tr>
+    {% for order in orders %}
+    <tr>
+        <td> {{ order.id }}</td>
+        <td> {{ order.client.name }}</td>
+        <td> {{ order.products_print }}</td>
+        <td> {{ order.total_price }}</td>
+        <td> {{ order.order_date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

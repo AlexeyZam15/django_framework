@@ -60,10 +60,15 @@ class OrderedProduct(models.Model):
     """
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     count = models.IntegerField()
-    order = models.ForeignKey('Order', on_delete=models.CASCADE)
 
     def __str__(self):
         return f'product: {self.product.name} count: {self.count}'
+
+    # При создании объекта отнимать у продукта количество
+    def save(self, *args, **kwargs):
+        self.product.count -= self.count
+        self.product.save()
+        super().save(*args, **kwargs)
 
 
 class Order(models.Model):
@@ -75,11 +80,42 @@ class Order(models.Model):
     — дата оформления заказа
     """
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
-    products = models.ManyToManyField(Product, through=OrderedProduct)
+    ordered_products = models.ManyToManyField(OrderedProduct)
     total_price = models.DecimalField(max_digits=10, decimal_places=2)
     order_date = models.DateField(auto_now_add=True)
 
     def __str__(self):
         return (f'id: {self.pk} client: {self.client.name} products: '
-                f'{", ".join([product.name + f" in count {product.orderedproduct_set.filter(order=self).first().count}" for product in self.products.all()])} total_price: {self.total_price} order date: '
+                f'{", ".join([or_product.product.name + f" in count {or_product.count}" for or_product in self.ordered_products.all()])} total_price: {self.total_price} order date: '
                 f'{self.order_date}')
+
+    @staticmethod
+    def create_order(client, products):
+        ordered_products = []
+        total_price = 0
+        for product_name, product_count in products:
+            product = Product.objects.filter(name=product_name).first()
+            if product is None:
+                raise ValueError(f'Product {product_name} not found')
+            product_count = int(product_count)
+            if product_count <= 0:
+                raise ValueError(f'Count for ordered product must be greater than 0')
+            while product.count < product_count:
+                raise ValueError(
+                    f'Not enough products in stock for {product_name}, ordered count = {product_count}')
+            ordered_products.append(OrderedProduct.objects.create(
+                product=product,
+                count=product_count,
+            ))
+            total_price += product.price * product_count
+            if not ordered_products:
+                raise ValueError('No products in the order')
+        order = Order.objects.create(
+            client=client,
+            total_price=total_price,
+        )
+        order.ordered_products.set(ordered_products)
+        return order
+
+    def products_print(self):
+        return ', '.join([or_product.product.name + f"({or_product.count})" for or_product in self.ordered_products.all()])

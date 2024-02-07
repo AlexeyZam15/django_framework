@@ -118,6 +118,9 @@ class Author(models.Model):
         author.delete()
         return author
 
+    @property
+    def articles(self):
+        return Article.objects.filter(author=self)
 
 """
 Задание 4

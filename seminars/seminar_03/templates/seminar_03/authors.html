@@ -1,0 +1,26 @@
+{% extends 'seminar_03/base.html' %}
+
+{% block title %}{{ title }} {% endblock %}
+
+{% block content %}
+<h2> {{ title }} </h2>
+<table class="table">
+    <tr>
+        {% for column in columns %}
+        <th>{{ column }}</th>
+        {% endfor %}
+    </tr>
+    {% for author in authors %}
+    <tr>
+        <td>{{ author.first_name }}</td>
+        <td>{{ author.last_name }}</td>
+        <td>{{ author.email }}</td>
+        <td>{{ author.birth_date }}</td>
+        <td>{% if author.articles %}
+            <a href="{% url 'author_articles' author.id %}"> {{ author.articles|length }}  </a></td>
+            {% else %} Нет
+            {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

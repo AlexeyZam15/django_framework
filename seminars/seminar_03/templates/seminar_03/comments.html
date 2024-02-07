@@ -1,0 +1,25 @@
+{% extends 'seminar_03/base.html' %}
+
+{% block title %}{{ title }} {% endblock %}
+
+{% block content %}
+<h2> {{ title }} </h2>
+<table class="table">
+    <tr>
+        {% for column in columns %}
+        <th>{{ column }}</th>
+        {% endfor %}
+    </tr>
+    {% for comment in comments %}
+    <tr>
+        <td>{{ comment.comment }}</td>
+        <td>{{ comment.date_created }}</td>
+        <td>{{ comment.date_modified }}</td>
+        <td>{% if comment.date_created != comment.date_modified %} Да
+            {% else %} Нет
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
