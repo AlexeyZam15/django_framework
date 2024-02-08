@@ -1,0 +1,23 @@
+{% extends 'orders_base.html' %}
+
+{% block title %}{{ title }} {% endblock %}
+
+{% block content %}
+<h2> {{ title }} </h2>
+<table class="table">
+    <tr>
+        {% for column in columns %}
+        <th>{{ column }}</th>
+        {% endfor %}
+    </tr>
+    {% for client in clients %}
+    <tr>
+        <td><a href="{% url 'client_full' client.id %}">{{ client.name }}</a></td>
+        <td>{{ client.email }}</td>
+        <td>{{ client.phone }}</td>
+        <td>{{ client.address}}</td>
+        <td>{{ client.reg_date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
