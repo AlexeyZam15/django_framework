@@ -1,32 +1,9 @@
-{% extends 'orders_base.html' %}
+{% extends 'seminar_03/base.html' %}
 
 {% block title %}{{ title }} {% endblock %}
 
 {% block content %}
 <h2> {{ title }} </h2>
-<p>Показать заказы за последние:</p>
-{% if client_id %}
-<ul class="list-group list-group-horizontal">
-    <li class="list-group-item"><a href="{% url 'client_orders' client_id %}">Все</a></li>
-    <li class="list-group-item"><a href="{% url 'client_orders_days' client_id 7 %}">7 дней</a></li>
-    <li class="list-group-item"><a href="{% url 'client_orders_days' client_id 30 %}">30 дней</a></li>
-    <li class="list-group-item"><a href="{% url 'client_orders_days' client_id 365 %}">365 дней</a></li>
-</ul>
-{% elif product_id %}
-<ul class="list-group list-group-horizontal">
-    <li class="list-group-item"><a href="{% url 'product_orders' product_id %}">Все</a></li>
-    <li class="list-group-item"><a href="{% url 'product_orders_days' product_id 7 %}">7 дней</a></li>
-    <li class="list-group-item"><a href="{% url 'product_orders_days' product_id 30 %}">30 дней</a></li>
-    <li class="list-group-item"><a href="{% url 'product_orders_days' product_id 365 %}">365 дней</a></li>
-</ul>
-{% else %}
-<ul class="list-group list-group-horizontal">
-    <li class="list-group-item"><a href="{% url 'get_orders' %}">Все</a></li>
-    <li class="list-group-item"><a href="{% url 'get_orders_days' days=7 %}">7 дней</a></li>
-    <li class="list-group-item"><a href="{% url 'get_orders_days' days=30 %}">30 дней</a></li>
-    <li class="list-group-item"><a href="{% url 'get_orders_days' days=365 %}">365 дней</a></li>
-</ul>
-{% endif %}
 <table class="table">
     <tr>
         {% for column in columns %}
@@ -36,12 +13,8 @@
     {% for order in orders %}
     <tr>
         <td> {{ order.id }}</td>
-        <td><a href="{% url 'client_full' order.client.id %}"> {{ order.client.name }} </a></td>
-        <td>{% for or_product in order.get_ordered_products %}
-            <a href="{% url 'product_full' or_product.product.id %}">
-                {{ or_product.product.name }}({{or_product.count}})</a>
-            {% endfor %}
-        </td>
+        <td> {{ order.client.name }}</td>
+        <td> {{ order.products_print }}</td>
         <td> {{ order.total_price }}</td>
         <td> {{ order.order_date }}</td>
     </tr>
