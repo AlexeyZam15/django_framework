@@ -20,6 +20,8 @@ from django.forms import model_to_dict
 from django.shortcuts import render, get_object_or_404
 from django.utils import lorem_ipsum
 
+from datetime import timedelta, datetime
+
 
 def index(request):
     context = {
@@ -181,18 +183,21 @@ def article_comments(request, article_id):
 from homework_02.models import Order, OrderedProduct, Product, Client
 
 
-def get_orders(request, client_id=None):
+def get_orders(request, client_id=None, days=None):
     orders = Order.objects.all()
+    title = 'Заказы'
     if client_id:
         client = get_object_or_404(Client, pk=client_id)
         orders = Order.objects.filter(client=client).all()
-        title = f'Заказы клиента {client.name}'
-    else:
-        title = 'Заказы'
+        title += f' клиента {client.name}'
+    if days:
+        orders = orders.filter(order_date__gte=datetime.now() - timedelta(days=days)).all()
+        title += f' за последние {days} дней'
     context = {
         'title': title,
-        'orders': orders,
+        'orders': orders.order_by('-order_date').all(),
         'columns': ['id', 'Клиент', 'Заказанные продукты', 'Общая стоимость', 'Дата'],
+        'client_id': client_id,
     }
     return render(request, 'seminar_03/orders.html', context)
 

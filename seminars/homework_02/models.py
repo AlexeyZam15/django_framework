@@ -30,6 +30,11 @@ class Client(models.Model):
         return (f'name: {self.name} email: {self.email} phone: {self.phone} address: {self.address} '
                 f'reg_date: {format_date}')
 
+    @property
+    def orders(self):
+        orders = Order.objects.filter(client=self).all()
+        return orders
+
 
 class Product(models.Model):
     """
@@ -44,7 +49,7 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     count = models.IntegerField()
-    date_added = models.DateTimeField(auto_now_add=True)
+    date_added = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         format_date = self.date_added.astimezone().strftime('%Y-%m-%d %H:%M:%S')
@@ -82,15 +87,16 @@ class Order(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
     ordered_products = models.ManyToManyField(OrderedProduct)
     total_price = models.DecimalField(max_digits=10, decimal_places=2)
-    order_date = models.DateField(auto_now_add=True)
+    order_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
+        format_date = self.order_date.astimezone().strftime('%Y-%m-%d %H:%M:%S')
         return (f'id: {self.pk} client: {self.client.name} products: '
                 f'{", ".join([or_product.product.name + f" in count {or_product.count}" for or_product in self.ordered_products.all()])} total_price: {self.total_price} order date: '
-                f'{self.order_date}')
+                f'{format_date}')
 
     @staticmethod
-    def create_order(client, products):
+    def create_order(client, products, date=None):
         ordered_products = []
         total_price = 0
         for product_name, product_count in products:
@@ -113,9 +119,15 @@ class Order(models.Model):
         order = Order.objects.create(
             client=client,
             total_price=total_price,
+            order_date=date
         )
         order.ordered_products.set(ordered_products)
         return order
 
     def products_print(self):
-        return ', '.join([or_product.product.name + f"({or_product.count})" for or_product in self.ordered_products.all()])
+        return ', '.join(
+            [or_product.product.name + f"({or_product.count})" for or_product in self.ordered_products.all()])
+
+    @property
+    def get_ordered_products(self):
+        return self.ordered_products.all()

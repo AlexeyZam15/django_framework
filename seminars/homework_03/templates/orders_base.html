@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Сайт{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<ul class="nav nav-pills">
+    <li class="nav-item"><a href="{% url 'get_clients' %}" class="nav-link">Клиенты</a></li>
+    <li class="nav-item"><a href="{% url 'get_products' %}" class="nav-link">Продукты</a></li>
+    <li class="nav-item"><a href="{% url 'get_orders' %}" class="nav-link">Заказы</a></li>
+</ul>
+{% block content %}
+<p>Скоро тут появится текст...</p>
+{% endblock %}
+</body>
+</html>
