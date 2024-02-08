@@ -1,0 +1,14 @@
+{% extends 'orders_base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h3>{{ title }}</h3>
+<p>Почта: {{ client.email }}</p>
+<p>Телефон: {{ client.phone }}</p>
+<p>Адрес: {{ client.address }}</p>
+<p>Дата регистрации: {{ client.reg_date }}</p>
+<a href="{% url 'client_orders' client.id %}">Посмотреть заказы</a>
+<br>
+<a href="{% url 'ordered_products' client.id%}">Посмотреть заказанные товары</a>
+{% endblock %}
