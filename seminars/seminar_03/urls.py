@@ -1,7 +1,6 @@
 from django.urls import path
 
-from .views import (index, about, coin, dice, random_number, article_full, get_articles, article_comments, get_orders,
-                    get_authors)
+from .views import index, about, coin, dice, random_number, article_full, get_articles, article_comments, get_orders, get_authors
 
 urlpatterns = [
     path('', index, name='index'),
@@ -14,8 +13,5 @@ urlpatterns = [
     path('articles/<int:article_id>/', article_full, name='article_full'),
     path('articles/<int:article_id>/comments/', article_comments, name='article_comments'),
     path('orders/', get_orders, name='get_orders'),
-    path('orders/client/<int:client_id>/', get_orders, name='client_orders'),
-    path('orders/client/<int:client_id>/days/<int:days>/', get_orders, name='client_orders_days'),
-    path('orders/days/<int:days>', get_orders, name='get_orders_days'),
     path('authors/', get_authors, name='get_authors'),
 ]
