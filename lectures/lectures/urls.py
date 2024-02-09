@@ -24,4 +24,5 @@ urlpatterns = [
     path('prefix/', include('lecture_01.urls')),
     path('lec3/', include('lecture_03.urls')),
     path('', index),
+    path('lec4/', include('lecture_04.urls')),
 ]

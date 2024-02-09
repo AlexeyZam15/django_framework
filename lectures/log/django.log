@@ -169,3 +169,108 @@ INFO 2024-02-05 20:07:49,208 basehttp 26676 56936 "GET /lec3/post/49/ HTTP/1.1" 
 INFO 2024-02-05 20:07:50,910 basehttp 26676 56936 "GET /lec3/post/48/ HTTP/1.1" 200 629
 INFO 2024-02-05 20:07:52,701 basehttp 26676 56936 "GET /lec3/post/47/ HTTP/1.1" 200 697
 INFO 2024-02-05 20:07:54,111 basehttp 26676 56936 "GET /lec3/post/46/ HTTP/1.1" 200 666
+INFO 2024-02-09 12:09:09,286 autoreload 35984 150412 Watching for file changes with StatReloader
+INFO 2024-02-09 12:09:20,022 basehttp 35984 73380 "GET /lec4/user/add HTTP/1.1" 301 0
+INFO 2024-02-09 12:09:20,048 basehttp 35984 24460 "GET /lec4/user/add/ HTTP/1.1" 200 562
+INFO 2024-02-09 12:15:58,908 autoreload 80256 31120 Watching for file changes with StatReloader
+INFO 2024-02-09 12:16:01,674 basehttp 80256 93944 "GET /lec4/user/add/ HTTP/1.1" 200 784
+INFO 2024-02-09 12:16:29,510 basehttp 80256 93944 "POST /lec4/user/add/ HTTP/1.1" 200 829
+INFO 2024-02-09 12:18:24,535 autoreload 80256 31120 C:\Users\wolfy\Downloads\django_framework\lectures\lectures\settings.py changed, reloading.
+INFO 2024-02-09 12:18:25,221 autoreload 162308 103264 Watching for file changes with StatReloader
+INFO 2024-02-09 12:18:38,629 basehttp 162308 65816 "POST /lec4/user/add/ HTTP/1.1" 200 829
+INFO 2024-02-09 12:19:53,429 autoreload 31204 72120 Watching for file changes with StatReloader
+INFO 2024-02-09 12:19:56,507 basehttp 31204 19024 "POST /lec4/user/add/ HTTP/1.1" 200 829
+INFO 2024-02-09 12:27:25,904 autoreload 31204 72120 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\views.py changed, reloading.
+INFO 2024-02-09 12:27:26,546 autoreload 125068 65820 Watching for file changes with StatReloader
+INFO 2024-02-09 12:27:31,726 basehttp 125068 67836 "POST /lec4/user/add/ HTTP/1.1" 200 829
+INFO 2024-02-09 12:27:39,013 autoreload 125068 65820 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\views.py changed, reloading.
+INFO 2024-02-09 12:27:39,665 autoreload 25412 30248 Watching for file changes with StatReloader
+INFO 2024-02-09 12:27:45,302 basehttp 25412 10144 "GET /lec4/user/add/ HTTP/1.1" 200 784
+INFO 2024-02-09 12:27:53,744 basehttp 25412 10144 "POST /lec4/user/add/ HTTP/1.1" 200 829
+INFO 2024-02-09 12:28:56,646 autoreload 25412 30248 C:\Users\wolfy\Downloads\django_framework\lectures\lectures\settings.py changed, reloading.
+INFO 2024-02-09 12:28:57,376 autoreload 45484 21120 Watching for file changes with StatReloader
+INFO 2024-02-09 12:29:02,463 basehttp 45484 43380 "POST /lec4/user/add/ HTTP/1.1" 200 829
+INFO 2024-02-09 12:29:25,679 autoreload 45484 21120 C:\Users\wolfy\Downloads\django_framework\lectures\lectures\settings.py changed, reloading.
+INFO 2024-02-09 12:29:26,480 autoreload 55844 66360 Watching for file changes with StatReloader
+INFO 2024-02-09 12:29:31,021 basehttp 55844 79912 "POST /lec4/user/add/ HTTP/1.1" 200 829
+INFO 2024-02-09 12:32:12,050 autoreload 55844 66360 C:\Users\wolfy\Downloads\django_framework\lectures\lectures\settings.py changed, reloading.
+INFO 2024-02-09 12:32:12,698 autoreload 21148 131252 Watching for file changes with StatReloader
+INFO 2024-02-09 12:32:16,254 views 21148 150452 Получили name='user', email='user@mail.ru', age=18.
+INFO 2024-02-09 12:32:16,271 basehttp 21148 150452 "POST /lec4/user/add/ HTTP/1.1" 200 829
+INFO 2024-02-09 12:35:25,178 autoreload 21148 131252 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\forms.py changed, reloading.
+INFO 2024-02-09 12:35:25,882 autoreload 54608 42932 Watching for file changes with StatReloader
+INFO 2024-02-09 12:37:41,544 autoreload 54608 42932 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\forms.py changed, reloading.
+INFO 2024-02-09 12:37:42,372 autoreload 44368 82356 Watching for file changes with StatReloader
+INFO 2024-02-09 12:37:45,082 autoreload 44368 82356 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\views.py changed, reloading.
+INFO 2024-02-09 12:37:45,909 autoreload 162136 155908 Watching for file changes with StatReloader
+INFO 2024-02-09 12:38:02,564 autoreload 162136 155908 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\views.py changed, reloading.
+INFO 2024-02-09 12:38:03,354 autoreload 81984 159928 Watching for file changes with StatReloader
+INFO 2024-02-09 12:38:55,913 autoreload 81984 159928 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\views.py changed, reloading.
+INFO 2024-02-09 12:38:56,602 autoreload 43756 49580 Watching for file changes with StatReloader
+INFO 2024-02-09 12:39:30,224 autoreload 43756 49580 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\urls.py changed, reloading.
+INFO 2024-02-09 12:39:30,974 autoreload 54936 126004 Watching for file changes with StatReloader
+INFO 2024-02-09 12:39:47,615 autoreload 54936 126004 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\urls.py changed, reloading.
+INFO 2024-02-09 12:39:48,391 autoreload 44572 66008 Watching for file changes with StatReloader
+INFO 2024-02-09 12:39:55,434 autoreload 44572 66008 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\urls.py changed, reloading.
+INFO 2024-02-09 12:39:56,283 autoreload 53096 42696 Watching for file changes with StatReloader
+INFO 2024-02-09 12:41:08,546 basehttp 53096 88276 "GET /lec4/forms HTTP/1.1" 301 0
+INFO 2024-02-09 12:41:08,611 basehttp 53096 67008 "GET /lec4/forms/ HTTP/1.1" 200 1490
+INFO 2024-02-09 12:41:39,931 autoreload 53096 42696 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\forms.py changed, reloading.
+INFO 2024-02-09 12:41:40,851 autoreload 100752 13536 Watching for file changes with StatReloader
+INFO 2024-02-09 12:42:07,348 views 100752 57044 Получили form.cleaned_data={'name': 'user', 'email': 'user@mail.ru', 'age': 18, 'height': 176.0, 'is_active': True, 'birthdate': datetime.date(1998, 2, 9), 'gender': 'M'}.
+INFO 2024-02-09 12:42:07,369 basehttp 100752 57044 "POST /lec4/forms/ HTTP/1.1" 200 1546
+INFO 2024-02-09 12:51:45,590 autoreload 100752 13536 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\forms.py changed, reloading.
+INFO 2024-02-09 12:51:46,561 autoreload 65580 158184 Watching for file changes with StatReloader
+INFO 2024-02-09 12:52:07,480 autoreload 65580 158184 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\forms.py changed, reloading.
+INFO 2024-02-09 12:52:08,184 autoreload 99600 29416 Watching for file changes with StatReloader
+INFO 2024-02-09 12:52:57,360 autoreload 99600 29416 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\forms.py changed, reloading.
+INFO 2024-02-09 12:52:58,118 autoreload 21920 70412 Watching for file changes with StatReloader
+INFO 2024-02-09 12:57:45,619 autoreload 21920 70412 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\views.py changed, reloading.
+INFO 2024-02-09 12:57:46,501 autoreload 64884 46896 Watching for file changes with StatReloader
+INFO 2024-02-09 12:58:18,963 autoreload 64884 46896 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\views.py changed, reloading.
+INFO 2024-02-09 12:58:19,781 autoreload 78584 55916 Watching for file changes with StatReloader
+INFO 2024-02-09 12:58:34,133 autoreload 78584 55916 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\views.py changed, reloading.
+INFO 2024-02-09 12:58:34,869 autoreload 50272 4228 Watching for file changes with StatReloader
+INFO 2024-02-09 13:00:55,247 autoreload 50272 4228 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\urls.py changed, reloading.
+INFO 2024-02-09 13:00:55,927 autoreload 36200 121000 Watching for file changes with StatReloader
+INFO 2024-02-09 13:01:21,023 autoreload 36200 121000 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\urls.py changed, reloading.
+INFO 2024-02-09 13:01:21,668 autoreload 102848 72708 Watching for file changes with StatReloader
+INFO 2024-02-09 13:01:23,055 basehttp 102848 157156 "GET /lec4/forms_widget HTTP/1.1" 301 0
+INFO 2024-02-09 13:01:23,087 basehttp 102848 137024 "GET /lec4/forms_widget/ HTTP/1.1" 200 2093
+INFO 2024-02-09 13:02:04,831 views 102848 137024 Получили form.cleaned_data={'name': 'user', 'email': 'user@mail.ru', 'age': 18, 'height': 176.0, 'is_active': True, 'birthdate': datetime.date(2024, 2, 9), 'gender': 'M', 'message': 'sdfsd'}.
+INFO 2024-02-09 13:02:04,839 basehttp 102848 137024 "POST /lec4/forms_widget/ HTTP/1.1" 200 2171
+INFO 2024-02-09 13:03:17,353 autoreload 102848 72708 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\forms.py changed, reloading.
+INFO 2024-02-09 13:03:18,452 autoreload 996 66004 Watching for file changes with StatReloader
+INFO 2024-02-09 13:03:27,727 autoreload 996 66004 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\forms.py changed, reloading.
+INFO 2024-02-09 13:03:28,430 autoreload 34592 121164 Watching for file changes with StatReloader
+INFO 2024-02-09 13:03:36,611 views 34592 82336 Получили form.cleaned_data={'name': 'user', 'email': 'user@mail.ru', 'age': 18, 'height': 176.0, 'is_active': True, 'birthdate': datetime.date(2024, 2, 9), 'gender': 'M', 'message': 'sdfsd'}.
+INFO 2024-02-09 13:03:36,637 basehttp 34592 82336 "POST /lec4/forms_widget/ HTTP/1.1" 200 2171
+INFO 2024-02-09 14:35:09,560 autoreload 34592 121164 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\forms.py changed, reloading.
+INFO 2024-02-09 14:35:10,408 autoreload 60948 67372 Watching for file changes with StatReloader
+INFO 2024-02-09 14:39:06,685 autoreload 60948 67372 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\models.py changed, reloading.
+INFO 2024-02-09 14:39:07,597 autoreload 63048 12564 Watching for file changes with StatReloader
+INFO 2024-02-09 14:47:47,257 autoreload 139828 45808 Watching for file changes with StatReloader
+INFO 2024-02-09 14:48:06,768 basehttp 139828 57296 "GET /lec4/user HTTP/1.1" 200 823
+INFO 2024-02-09 14:48:59,132 basehttp 139828 57296 "POST /lec4/user HTTP/1.1" 200 1110
+INFO 2024-02-09 14:49:20,944 views 139828 57296 Получили name='Алексей', email='user@corp.mail.ru', age=10.
+INFO 2024-02-09 14:49:21,175 basehttp 139828 57296 "POST /lec4/user HTTP/1.1" 200 895
+INFO 2024-02-09 14:50:23,929 autoreload 139828 45808 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\forms.py changed, reloading.
+INFO 2024-02-09 14:50:24,725 autoreload 138868 33060 Watching for file changes with StatReloader
+INFO 2024-02-09 14:51:06,779 autoreload 138868 33060 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\forms.py changed, reloading.
+INFO 2024-02-09 14:51:07,570 autoreload 39464 59224 Watching for file changes with StatReloader
+INFO 2024-02-09 14:53:04,851 autoreload 39464 59224 C:\Users\wolfy\Downloads\django_framework\lectures\lectures\settings.py changed, reloading.
+INFO 2024-02-09 14:53:05,805 autoreload 124684 157512 Watching for file changes with StatReloader
+INFO 2024-02-09 14:53:36,166 autoreload 124684 157512 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\views.py changed, reloading.
+INFO 2024-02-09 14:53:36,990 autoreload 67980 64716 Watching for file changes with StatReloader
+INFO 2024-02-09 14:54:04,132 autoreload 67980 64716 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\views.py changed, reloading.
+INFO 2024-02-09 14:54:04,916 autoreload 60756 82084 Watching for file changes with StatReloader
+INFO 2024-02-09 14:54:06,739 autoreload 60756 82084 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\views.py changed, reloading.
+INFO 2024-02-09 14:54:07,501 autoreload 51252 66456 Watching for file changes with StatReloader
+INFO 2024-02-09 14:55:38,045 autoreload 51252 66456 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\views.py changed, reloading.
+INFO 2024-02-09 14:55:38,737 autoreload 144300 144528 Watching for file changes with StatReloader
+INFO 2024-02-09 14:56:32,349 autoreload 144300 144528 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_04\urls.py changed, reloading.
+INFO 2024-02-09 14:56:33,037 autoreload 61580 157300 Watching for file changes with StatReloader
+INFO 2024-02-09 14:57:59,919 basehttp 61580 79336 "GET /lec4/upload HTTP/1.1" 301 0
+INFO 2024-02-09 14:57:59,936 basehttp 61580 14532 "GET /lec4/upload/ HTTP/1.1" 200 595
+INFO 2024-02-09 14:58:45,723 basehttp 61580 14532 "POST /lec4/upload/ HTTP/1.1" 200 595
+INFO 2024-02-09 14:59:16,635 basehttp 61580 14532 "POST /lec4/upload/ HTTP/1.1" 200 595
