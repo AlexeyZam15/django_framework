@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'lecture_01',
     'lecture_02',
     'lecture_03',
+    'lecture_04',
 ]
 
 MIDDLEWARE = [
@@ -119,6 +120,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -140,12 +144,13 @@ LOGGING = {
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
-            'formatter': 'verbose',  # добавлен параметр formatter
+            'formatter': 'verbose',
         },
         'file': {
             'class': 'logging.FileHandler',
             'filename': './log/django.log',
-            'formatter': 'verbose',  # добавлен параметр formatter
+            'formatter': 'verbose',
+            'encoding': 'utf-8',
         },
     },
     'loggers': {
@@ -156,6 +161,11 @@ LOGGING = {
         'lecture_01': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
+            'propagate': True,
+        },
+        'lecture_04': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
             'propagate': True,
         },
     },
