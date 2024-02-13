@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.timezone import now
 
 """
 Создайте три модели Django: клиент, товар и заказ.
@@ -50,11 +51,17 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     count = models.IntegerField()
     date_added = models.DateTimeField(auto_now=True)
+    photo = models.FileField(upload_to='photos', blank=True)
 
     def __str__(self):
         format_date = self.date_added.astimezone().strftime('%Y-%m-%d %H:%M:%S')
         return f'name: {self.name} description: {self.description} price: {self.price} ' \
                f'count: {self.count} date_added: {format_date}'
+
+    @property
+    def orders(self):
+        orders = Order.objects.filter(ordered_products__product=self).all()
+        return orders
 
 
 class OrderedProduct(models.Model):
@@ -63,7 +70,7 @@ class OrderedProduct(models.Model):
     — ссылка на товар
     — количество заказанного товара
     """
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product = models.ForeignKey('Product', on_delete=models.CASCADE)
     count = models.IntegerField()
 
     def __str__(self):
@@ -87,7 +94,7 @@ class Order(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
     ordered_products = models.ManyToManyField(OrderedProduct)
     total_price = models.DecimalField(max_digits=10, decimal_places=2)
-    order_date = models.DateTimeField(auto_now_add=True)
+    order_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         format_date = self.order_date.astimezone().strftime('%Y-%m-%d %H:%M:%S')
@@ -131,3 +138,8 @@ class Order(models.Model):
     @property
     def get_ordered_products(self):
         return self.ordered_products.all()
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.order_date = now()
+        super().save(*args, **kwargs)

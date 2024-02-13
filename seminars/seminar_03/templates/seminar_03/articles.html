@@ -4,6 +4,7 @@
 
 {% block content %}
 <h2> {{ title }} </h2>
+<a class="btn btn-primary" role="button" href="{% url 'article_create'%}">Создать статью</a>
 <table class="table">
     <tr>
         {% for column in columns %}
@@ -25,6 +26,7 @@
             {% else %} Нет
             {% endif %}
         </td>
+        <td>{{ article.comments|length }}</td>
     </tr>
     {% endfor %}
 </table>

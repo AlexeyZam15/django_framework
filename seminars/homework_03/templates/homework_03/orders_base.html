@@ -10,6 +10,15 @@
     <li class="nav-item"><a href="{% url 'get_products' %}" class="nav-link">Продукты</a></li>
     <li class="nav-item"><a href="{% url 'get_orders' %}" class="nav-link">Заказы</a></li>
 </ul>
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <div class="alert {% if message.tags %}alert-{{ message.tags }}" {% endif %}>
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
 {% block content %}
 <p>Скоро тут появится текст...</p>
 {% endblock %}

@@ -1,10 +1,11 @@
 from django.urls import path
 
-from .views import ordered_items_by_time_in_days, product_orders, product_full, get_clients, client_full, get_products
+from .views import ordered_items_by_time_in_days, product_orders, product_full, get_clients, client_full, get_products, \
+    order_full
 
 urlpatterns = [
     path('client/<int:client_id>/ordered_products/', ordered_items_by_time_in_days,
-             name='ordered_products'),
+         name='ordered_products'),
     path('client/<int:client_id>/ordered_products/days/<int:days>/', ordered_items_by_time_in_days,
          name='ordered_products'),
     path('orders/product/<int:product_id>', product_orders, name='product_orders'),
@@ -13,5 +14,6 @@ urlpatterns = [
     path('product/<int:product_id>', product_full, name='product_full'),
     path('clients/', get_clients, name='get_clients'),
     path('clients/<int:client_id>/', client_full, name='client_full'),
+    path('orders/<int:order_id>/', order_full, name='order_full')
 
 ]

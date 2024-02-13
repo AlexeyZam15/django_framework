@@ -13,6 +13,72 @@
     {% if article.is_published %} Да
     {% else %} Нет
     {% endif %}</p>
-<a href="{% url 'article_comments' article.id %}">Посмотреть комментарии</a>
+<p><a class="btn btn-primary" role="button" href="{% url 'article_update' article.id %}"> Изменить данные </a></p>
+<p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCommentCreate"
+            aria-expanded="false" aria-controls="collapseCommentCreate">
+        {{ action }} комментарий
+    </button>
+</p>
+<div class="{{ form_state }}" id="collapseCommentCreate">
+    <div class="card card-body">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_div }}
+            <input type="submit" value="Подтвердить">
+        </form>
+    </div>
+</div>
+<p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseComments"
+            aria-expanded="false" aria-controls="collapseComments">
+        Скрыть комментарии
+    </button>
+</p>
+<div class="collapse show" id="collapseComments">
+    <div class="card card-body">
+        <section style="background-color: #eee;">
+            <div class="container my-5 py-5">
+                <div class="row d-flex justify-content-center">
+                    {% for comment in comments %}
+                    <div class="col-md-12 col-lg-10 col-xl-8">
 
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex flex-start align-items-center">
+                                    <img class="rounded-circle shadow-1-strong me-3"
+                                         src="https://pic.rutubelist.ru/user/ef/0e/ef0e915546d95329bdad9ae3afecc315.jpg"
+                                         alt="avatar"
+                                         width="60"
+                                         height="60"/>
+                                    <div>
+                                        <h6 class="fw-bold text-primary mb-1">{{ comment.author.full_name }}</h6>
+
+                                        <p class="text-muted small mb-0">
+                                            Дата создания: {{ comment.date_created }}
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                                <p class="mt-3 mb-4 pb-2">
+                                    {{ comment.comment }}
+                                </p>
+                                <p class="text-muted small mb-0"> {% if comment.is_changed %}
+                                    Изменено {{ comment.date_modified }}
+                                    {% endif %}
+                                </p>
+                                <a href="{% url 'comment_update' article.id comment.id %}">
+                                                Редактировать </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
 {% endblock %}

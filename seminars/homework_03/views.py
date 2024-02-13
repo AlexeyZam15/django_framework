@@ -82,7 +82,7 @@ def ordered_items_by_time_in_days(request, client_id, days=None):
         'client_products': client_products,
         'client_id': client_id,
     }
-    return render(request, 'client_products.html', context)
+    return render(request, 'homework_03/client_products.html', context)
 
 
 def product_orders(request, product_id, days=None):
@@ -96,7 +96,7 @@ def product_orders(request, product_id, days=None):
         'orders': products,
         'product_id': product_id,
     }
-    return render(request, 'product_orders.html', context)
+    return render(request, 'homework_03/product_orders.html', context)
 
 
 def product_full(request, product_id):
@@ -105,7 +105,7 @@ def product_full(request, product_id):
         'title': f'Товар {product.name}',
         'product': product,
     }
-    return render(request, 'product.html', context)
+    return render(request, 'homework_03/product.html', context)
 
 
 def client_full(request, client_id):
@@ -114,24 +114,33 @@ def client_full(request, client_id):
         'title': f'Клиент {client.name}',
         'client': client,
     }
-    return render(request, 'client.html', context)
+    return render(request, 'homework_03/client.html', context)
 
 
 def get_clients(request):
-    clients = Client.objects.all()
+    clients = Client.objects.order_by('-reg_date').all()
     context = {
         'title': 'Клиенты',
         'columns': ['Имя', 'Почта', 'Телефон', 'Адрес', 'Дата регистрации'],
         'clients': clients,
     }
-    return render(request, 'clients.html', context)
+    return render(request, 'homework_03/clients.html', context)
 
 
 def get_products(request):
-    products = Product.objects.all()
+    products = Product.objects.order_by('-date_added').all()
     context = {
         'title': 'Товары',
         'columns': ['Название', 'Описание', 'Цена', 'Количество', 'Дата добавления'],
         'products': products,
     }
-    return render(request, 'products.html', context)
+    return render(request, 'homework_03/products.html', context)
+
+
+def order_full(request, order_id):
+    order = Order.objects.get(id=order_id)
+    context = {
+        'title': f'Заказ {order.id}',
+        'order': order,
+    }
+    return render(request, 'homework_03/order.html', context)

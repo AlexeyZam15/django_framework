@@ -36,8 +36,8 @@ class Command(BaseCommand):
             Product.objects.create(
                 name=f'Product_{pk}',
                 description=f'Description_{pk}',
-                price=random.randint(1, 1000),
-                count=random.randint(1, 70)
+                price=random.randint(10, 1000),
+                count=random.randint(5, 70)
             )
         self.stdout.write(self.style.SUCCESS(f'Created {count} fake products'))
         return
