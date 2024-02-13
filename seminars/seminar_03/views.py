@@ -17,7 +17,7 @@
 from random import randint
 
 from django.forms import model_to_dict
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import lorem_ipsum
 
 from datetime import timedelta, datetime
@@ -81,7 +81,7 @@ def dice(request, count):
     return render(request, 'seminar_03/page.html', context)
 
 
-def random_number(request, max_n, count):
+def random_number(request, max_n=100, count=1):
     res_list = []
     for i in range(1, count + 1):
         rnd = randint(1, max_n)
@@ -109,9 +109,11 @@ def random_number(request, max_n, count):
 
 from seminar_02.models import Article, Author
 
+from seminar_04.forms import CommentForm
+
 
 def get_articles(request, author_id=None):
-    articles = Article.objects.all()
+    articles = Article.objects.order_by('-date_published').all()
     if author_id:
         author = get_object_or_404(Author, pk=author_id)
         articles = Article.objects.filter(author=author).all()
@@ -120,7 +122,8 @@ def get_articles(request, author_id=None):
         title = 'Статьи'
     context = {
         'title': title,
-        'columns': ['Заголовок', 'Дата публикации', 'Автор публикации', 'Категория', 'Просмотры', 'Опубликована'],
+        'columns': ['Заголовок', 'Дата публикации', 'Автор публикации', 'Категория', 'Просмотры', 'Опубликована',
+                    'Комментариев'],
         'articles': articles,
     }
     return render(request, 'seminar_03/articles.html', context)
@@ -138,10 +141,28 @@ urls.py - добавьте маршрут.
 """
 
 
-def article_full(request, article_id):
+def article_full(request, article_id, comment_id=None):
     article = get_object_or_404(Article, pk=article_id)
-    context = {'title': f'Статья автора {article.author.full_name} ', 'article': article}
-    article.views += 1
+    if comment_id:
+        comment = get_object_or_404(Comment, pk=comment_id, article=article)
+        form = CommentForm(request.POST or None, instance=comment)
+        form_state = 'collapse show'
+        action = 'Изменить'
+    else:
+        form = CommentForm(request.POST or None)
+        form_state = 'collapse'
+        action = 'Добавить'
+    if request.method == 'POST':
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.article = article
+            comment.save()
+            return redirect('article_full', article_id=article_id)
+    else:
+        article.views += 1
+    comments = Comment.objects.order_by('-date_modified').filter(article=article).select_related('author').all()
+    context = {'title': f'Статья автора {article.author.full_name} ', 'article': article, 'form': form,
+               'comments': comments, 'form_state': form_state, 'action': action}
     return render(request, 'seminar_03/article.html', context)
 
 
@@ -206,10 +227,16 @@ def get_orders(request, client_id=None, days=None):
 
 
 def get_authors(request):
-    authors = Author.objects.all()
+    authors = Author.objects.order_by('-id').all()
     context = {
         'title': 'Авторы',
-        'columns': ['Имя', 'Фамилия', 'Почта', 'Дата рождения', 'Статьи'],
+        'columns': ['Автор', 'Почта', 'Дата рождения', 'Статьи'],
         'authors': authors,
     }
     return render(request, 'seminar_03/authors.html', context)
+
+
+def author_full(request, author_id):
+    author = get_object_or_404(Author, pk=author_id)
+    context = {'title': f'Автор {author.full_name}', 'author': author}
+    return render(request, 'seminar_03/author.html', context)

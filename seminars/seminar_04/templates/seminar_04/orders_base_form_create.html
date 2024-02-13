@@ -1,0 +1,10 @@
+{% extends 'homework_03/orders_base.html' %}
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_div }}
+    <input type="submit" value="{{ action }}">
+</form>
+{% endblock %}

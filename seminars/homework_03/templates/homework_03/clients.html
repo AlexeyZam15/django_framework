@@ -1,9 +1,10 @@
-{% extends 'orders_base.html' %}
+{% extends 'homework_03/orders_base.html' %}
 
 {% block title %}{{ title }} {% endblock %}
 
 {% block content %}
 <h2> {{ title }} </h2>
+<a class="btn btn-primary" role="button" href="{% url 'client_create'%}">Создать клиента</a>
 <table class="table">
     <tr>
         {% for column in columns %}

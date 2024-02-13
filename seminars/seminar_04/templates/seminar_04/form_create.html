@@ -1,0 +1,10 @@
+{% extends 'seminar_03/base.html' %}
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_div }}
+    <input type="submit" value="{{ action }}">
+</form>
+{% endblock %}

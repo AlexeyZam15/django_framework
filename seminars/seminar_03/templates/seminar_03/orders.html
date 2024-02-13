@@ -1,9 +1,10 @@
-{% extends 'orders_base.html' %}
+{% extends 'homework_03/orders_base.html' %}
 
 {% block title %}{{ title }} {% endblock %}
 
 {% block content %}
 <h2> {{ title }} </h2>
+<a class="btn btn-primary" role="button" href="{% url 'order_create'%}">Создать заказ</a>
 <p>Показать заказы за последние:</p>
 {% if client_id %}
 <ul class="list-group list-group-horizontal">
@@ -35,11 +36,11 @@
     </tr>
     {% for order in orders %}
     <tr>
-        <td> {{ order.id }}</td>
+        <td><a href="{% url 'order_full' order.id %}"> {{ order.id }}</a></td>
         <td><a href="{% url 'client_full' order.client.id %}"> {{ order.client.name }} </a></td>
         <td>{% for or_product in order.get_ordered_products %}
             <a href="{% url 'product_full' or_product.product.id %}">
-                {{ or_product.product.name }}({{or_product.count}})</a>
+                {{ or_product.product.name }}({{ or_product.count }})</a>
             {% endfor %}
         </td>
         <td> {{ order.total_price }}</td>

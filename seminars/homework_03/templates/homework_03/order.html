@@ -1,0 +1,17 @@
+{% extends 'homework_03/orders_base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h3>{{ title }}</h3>
+<p>Номер заказа: {{ order.id }}</p>
+<p>Клиент: <a href="{% url 'client_full' order.client.id %}">{{ order.client.name}}</a></p>
+<p> Заказанные продукты:
+    {% for or_product in order.get_ordered_products %}
+    <a href="{% url 'product_full' or_product.product.id %}">
+        {{ or_product.product.name }}({{or_product.count}})</a>
+    {% endfor %}</p>
+<p>Цена: {{ order.total_price }}</p>
+<p>Дата заказа: {{ order.order_date }}</p>
+<p><a class="btn btn-primary" role="button" href="{% url 'order_delete' order.id %}"> Удалить заказ </a></p>
+{% endblock %}

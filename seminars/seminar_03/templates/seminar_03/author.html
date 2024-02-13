@@ -1,0 +1,15 @@
+{% extends 'seminar_03/base.html' %}
+
+{% block title %}{{ author.full_name }}{% endblock %}
+
+{% block content %}
+<h3>{{ author.full_name }}</h3>
+<p>Почта: {{ author.email }}</p>
+<p>Биография: {{ author.bio }}</p>
+<p>Дата рождения: {{ author.birth_date }}</p>
+<a class="btn btn-primary" role="button" href="{% url 'author_update' author.id %}"> Изменить данные </a>
+{% if author.articles %}
+<a class="btn btn-primary" role="button" href="{% url 'author_articles' author.id %}"> Посмотреть статьи автора </a>
+{% endif %}
+
+{% endblock %}

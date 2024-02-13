@@ -1,0 +1,18 @@
+{% extends 'homework_03/orders_base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h3>{{ title }}</h3>
+<p>Почта: {{ client.email }}</p>
+<p>Телефон: {{ client.phone }}</p>
+<p>Адрес: {{ client.address }}</p>
+<p>Дата регистрации: {{ client.reg_date }}</p>
+<p><a class="btn btn-primary" role="button" href="{% url 'client_update' client.id %}"> Изменить данные </a></p>
+{% if client.orders %}
+<p><a href="{% url 'client_orders' client.id %}">Посмотреть заказы</a></p>
+<p><a href="{% url 'ordered_products' client.id%}">Посмотреть заказанные товары</a></p>
+{% endif %}
+<p><a class="btn btn-danger" role="button" href="{% url 'client_delete' client.id %}"
+      onclick="return confirm('Вы уверены?')"> Удалить клиента </a></p>
+{% endblock %}

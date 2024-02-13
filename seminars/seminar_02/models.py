@@ -76,7 +76,7 @@ class Author(models.Model):
     last_name = models.CharField(max_length=100)
     email = models.EmailField()
     bio = models.TextField()
-    birth_date = models.CharField(max_length=10)
+    birth_date = models.DateField()
 
     fields = ['first_name', 'last_name', 'email', 'bio', 'birth_date']
 
@@ -121,6 +121,7 @@ class Author(models.Model):
     @property
     def articles(self):
         return Article.objects.filter(author=self)
+
 
 """
 Задание 4
@@ -184,6 +185,10 @@ class Article(models.Model):
         article.delete()
         return article
 
+    @property
+    def comments(self):
+        return Comment.objects.filter(article=self).all()
+
     def __str__(self):
         formatted_date = self.date_published.strftime('%d.%m.%Y %H:%M:%S')
         return f"{self.title} {self.content} {formatted_date} {self.author.full_name} {self.category} {self.views} {self.is_published}"
@@ -235,3 +240,7 @@ class Comment(models.Model):
         if count is not None:
             data = data[:count]
         return data
+
+    def is_changed(self):
+        """Сравнение даты создания и изменения без учёта секунд"""
+        return self.date_created.strftime('%d.%m.%Y %H:%M') != self.date_modified.strftime('%d.%m.%Y %H:%M')
