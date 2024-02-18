@@ -1,7 +1,4 @@
-from dateutil.utils import today
 from django import forms
-from django.db.transaction import commit
-from django.shortcuts import get_object_or_404
 from seminar_02.models import Author, Article, Comment
 from homework_02.models import Client, Product, Order, OrderedProduct
 
@@ -269,10 +266,16 @@ class OrderedProductForm(forms.ModelForm):
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ['client']
+        fields = ['client', 'ordered_products']
         widgets = {
             'client': forms.Select(attrs={'class': 'form-group'}),
+            'ordered_products': forms.CheckboxSelectMultiple(attrs={'class': 'form-group'}),
         }
         labels = {
             'client': 'Клиент',
+            'ordered_products': 'Товары',
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['ordered_products'].queryset = OrderedProduct.objects.filter(order=None)

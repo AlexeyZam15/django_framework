@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'seminar_03',
     'homework_03',
     'seminar_04',
+    'seminar_05',
 ]
 
 MIDDLEWARE = [
@@ -108,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
@@ -182,6 +183,11 @@ LOGGING = {
             'propagate': True,
         },
         'seminar_04': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'seminar_05': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,

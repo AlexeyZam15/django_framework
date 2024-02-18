@@ -1,5 +1,6 @@
 import random
 
+from django.contrib import admin
 from django.db import models
 
 from datetime import date
@@ -22,12 +23,12 @@ class Coin(models.Model):
     HEADS = 'H'
     TAILS = 'T'
     CHOICES = (
-        (HEADS, 'Heads'),
-        (TAILS, 'Tails'),
+        (HEADS, 'Орёл'),
+        (TAILS, 'Решка'),
     )
     choices = [HEADS, TAILS]
-    side = models.CharField(max_length=1, choices=CHOICES)
-    time = models.DateTimeField(auto_now_add=True)
+    side = models.CharField(max_length=1, choices=CHOICES, verbose_name='Сторона')
+    time = models.DateTimeField(auto_now=True, verbose_name='Время броска')
 
     def __str__(self):
         return f'{self.side} {self.time}'
@@ -56,6 +57,21 @@ class Coin(models.Model):
         """Возвращает n последних монет"""
         return Coin.objects.order_by('-time')[:n]
 
+    class Meta:
+        ordering = ['-time']
+        verbose_name = 'Монета'
+        verbose_name_plural = 'Монеты'
+
+    @admin.display(description='Сторона')
+    def get_side(self):
+        return 'Решка' if self.side == 'T' else 'Орёл'
+
+    def throw(self):
+        """Бросок монеты"""
+        self.side = random.choice(self.choices)
+        self.save()
+        return self.side
+
 
 """
 Задание 3
@@ -72,11 +88,13 @@ class Coin(models.Model):
 
 
 class Author(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    email = models.EmailField()
-    bio = models.TextField()
-    birth_date = models.DateField()
+    first_name = models.CharField(max_length=100, verbose_name='Имя')
+    last_name = models.CharField(max_length=100, verbose_name='Фамилия')
+    email = models.EmailField(verbose_name='Почта')
+    bio = models.TextField(verbose_name='Биография', null=True, blank=True)
+    birth_date = models.DateField(verbose_name='День рождения', null=True, blank=True)
+    reg_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата регистрации')
+    change_date = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
 
     fields = ['first_name', 'last_name', 'email', 'bio', 'birth_date']
 
@@ -122,6 +140,11 @@ class Author(models.Model):
     def articles(self):
         return Article.objects.filter(author=self)
 
+    class Meta:
+        ordering = ['-change_date']
+        verbose_name = 'Автор'
+        verbose_name_plural = 'Авторы'
+
 
 """
 Задание 4
@@ -146,13 +169,14 @@ Django Article (статья).
 
 
 class Article(models.Model):
-    title = models.CharField(max_length=200)
-    content = models.TextField()
-    date_published = models.DateTimeField(auto_now_add=True)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    category = models.CharField(max_length=100)
-    views = models.IntegerField(default=0)
-    is_published = models.BooleanField(default=False)
+    title = models.CharField(max_length=200, verbose_name='Заголовок')
+    content = models.TextField(verbose_name='Содержание', null=True, blank=True)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, verbose_name='Автор')
+    category = models.CharField(max_length=100, verbose_name='Категория')
+    views = models.IntegerField(default=0, verbose_name='Просмотры')
+    is_published = models.BooleanField(default=False, verbose_name='Опубликовано')
+    date_published = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
+    change_date = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
 
     fields = ['title', 'content', 'category', 'views']
 
@@ -193,6 +217,15 @@ class Article(models.Model):
         formatted_date = self.date_published.strftime('%d.%m.%Y %H:%M:%S')
         return f"{self.title} {self.content} {formatted_date} {self.author.full_name} {self.category} {self.views} {self.is_published}"
 
+    class Meta:
+        ordering = ['-change_date']
+        verbose_name = 'Статья'
+        verbose_name_plural = 'Статьи'
+
+    @admin.display(description="Автор")
+    def author_full_name(self):
+        return self.author.full_name
+
 
 """
 Задание №6
@@ -218,11 +251,11 @@ class Article(models.Model):
 
 
 class Comment(models.Model):
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    article = models.ForeignKey(Article, on_delete=models.CASCADE)
-    comment = models.TextField()
-    date_created = models.DateTimeField(auto_now_add=True)
-    date_modified = models.DateTimeField(auto_now=True)
+    author = models.ForeignKey('Author', on_delete=models.CASCADE, related_name='comments', verbose_name='Автор')
+    article = models.ForeignKey('Article', on_delete=models.CASCADE, related_name='comments', verbose_name='Статья')
+    comment = models.TextField(verbose_name='Комментарий', null=True, blank=True)
+    date_created = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
+    date_modified = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
 
     fields = ['comment']
 
@@ -244,3 +277,16 @@ class Comment(models.Model):
     def is_changed(self):
         """Сравнение даты создания и изменения без учёта секунд"""
         return self.date_created.strftime('%d.%m.%Y %H:%M') != self.date_modified.strftime('%d.%m.%Y %H:%M')
+
+    class Meta:
+        ordering = ['-date_modified']
+        verbose_name = 'Комментарий'
+        verbose_name_plural = 'Комментарии'
+
+    @admin.display(description='Автор')
+    def author_full_name(self):
+        return self.author.full_name
+
+    @admin.display(description='Статья')
+    def article_title(self):
+        return self.article.title

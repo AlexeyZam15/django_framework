@@ -10,9 +10,11 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         comments = Comment.objects.all()
+        count = 0
         for comment in comments:
             if randint(0, 1) == 1:
                 comment.comment += ' changed'
                 comment.save()
-        self.stdout.write(self.style.SUCCESS('Fake comments changed'))
+                count += 1
+        self.stdout.write(self.style.SUCCESS(f'{count} fake comments changed'))
         return

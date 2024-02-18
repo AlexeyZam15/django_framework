@@ -2,15 +2,13 @@ from django.contrib import messages
 from django.core.files.storage import FileSystemStorage
 from django.shortcuts import render, redirect, get_object_or_404
 
-from .forms import GamesForm, AuthorForm, ArticleForm, ClientForm, ProductForm, OrderForm, OrderedProductForm, ImageForm
+from .forms import GamesForm, AuthorForm, ArticleForm, ClientForm, ProductForm, OrderForm, OrderedProductForm
 
 import logging
 
 from seminar_02.models import Author, Article, Comment
 
-from homework_02.models import Client, Product
-
-from homework_02.models import Order
+from homework_02.models import Client, Product, Order, OrderedProduct
 
 logger = logging.getLogger(__name__)
 
@@ -193,10 +191,8 @@ def product_update(request, product_id):
 
 
 def order_create(request):
-    if not 'ordered_products' in request.session:
-        request.session['ordered_products'] = {}
-    ordered_products = request.session['ordered_products'].items()
     form = OrderForm(request.POST or None)
+    ordered_products = OrderedProduct.get_none_ordered_products()
     context = {'title': 'Создание заказа',
                'form': form,
                'action': 'Сделать заказ',
@@ -209,11 +205,10 @@ def order_create(request):
                 order = Order.create_order(client, ordered_products)
             except ValueError as ve:
                 messages.error(request, ve)
-                request.session['ordered_products'] = {}
+                logger.error(f'{ve}')
                 return redirect('order_create')
             logger.info(f'Создан заказ: {order}.')
             messages.success(request, f'Заказ {order.id} успешно создан')
-            request.session['ordered_products'] = {}
             return redirect('order_full', order.id)
     return render(request, 'seminar_04/orders_order_form_create.html', context)
 
@@ -225,30 +220,25 @@ def order_create_product_add(request):
                'action': 'Добавить',
                }
     if request.method == 'POST':
-        if not 'ordered_products' in request.session:
-            request.session['ordered_products'] = {}
         if form.is_valid():
             product_name = form.cleaned_data['product'].name
-            product = get_object_or_404(Product, name=product_name)
             product_count = form.cleaned_data['count']
-            if product_count > product.count:
-                logger.error(f'Недостаточно товара {product_name} для заказа.')
-                messages.error(request, f'Недостаточно товара {product_name} для заказа.')
+            try:
+                order = OrderedProduct.create_ordered_product(product_name, product_count)
+                order.save()
+            except ValueError as ve:
+                messages.error(request, ve)
+                logger.error(f'{ve}')
                 return redirect('order_create_product_add')
-            if product_name not in request.session['ordered_products']:
-                request.session['ordered_products'][product_name] = product_count
-            else:
-                request.session['ordered_products'][product_name] += product_count
             logger.info(f'В корзину добавлен товар {product_name} в количестве {product_count}.')
             return redirect('order_create')
     return render(request, 'seminar_04/orders_base_form_create.html', context)
 
 
-def order_create_product_delete(request, product_name):
-    if 'ordered_products' in request.session:
-        if product_name in request.session['ordered_products']:
-            del request.session['ordered_products'][product_name]
-            logger.info(f'Из корзины удален товар {product_name}.')
+def order_create_all_products_delete(request):
+    OrderedProduct.cancel_ordered_products()
+    logger.info(f'Корзина товаров очищена.')
+    messages.success(request, f'Корзина товаров очищена')
     return redirect('order_create')
 
 
@@ -257,7 +247,6 @@ def order_delete(request, order_id):
     order.delete()
     logger.info(f'Удален заказ: {order_id}.')
     messages.success(request, f'Заказ {order_id} успешно удален')
-    request.session['deleted'] = True
     return redirect('get_orders')
 
 
@@ -267,7 +256,6 @@ def client_delete(request, client_id):
     client.delete()
     logger.info(f'Удален клиент: {client_name}.')
     messages.success(request, f'Клиент {client_name} успешно удален')
-    request.session['deleted'] = True
     return redirect('get_clients')
 
 
@@ -277,5 +265,4 @@ def product_delete(request, product_id):
     product.delete()
     logger.info(f'Удален товар: {product_name}.')
     messages.success(request, f'Товар {product_name} успешно удален')
-    request.session['deleted'] = True
     return redirect('get_products')

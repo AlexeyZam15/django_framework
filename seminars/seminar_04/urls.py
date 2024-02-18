@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import games_choose, author_create, article_create, client_create, product_create, order_create, \
     author_update, article_update, client_update, product_update, order_create_product_add, order_delete, \
-    order_create_product_delete, product_delete, client_delete
+    product_delete, client_delete, order_create_all_products_delete
 from seminar_03.views import article_full
 
 urlpatterns = [
@@ -17,8 +17,7 @@ urlpatterns = [
     path('orders/create/', order_create, name='order_create'),
     path('orders/<int:order_id>/delete', order_delete, name='order_delete'),
     path('orders/create/product_add/', order_create_product_add, name='order_create_product_add'),
-    path('orders/create/product_del/<str:product_name>', order_create_product_delete,
-         name='order_create_product_delete'),
+    path('orders/create/products_delete', order_create_all_products_delete, name='order_create_all_products_delete'),
     path('authors/<int:author_id>/update/', author_update, name='author_update'),
     path('articles/<int:article_id>/update/', article_update, name='article_update'),
     path('articles/<int:article_id>/comment/<int:comment_id>/update', article_full, name='comment_update'),
