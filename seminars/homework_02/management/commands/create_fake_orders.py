@@ -32,10 +32,16 @@ class Command(BaseCommand):
             for _ in range(random.randint(1, 3)):
                 product = random.choice(products)
                 count = random.randint(1, 10)
-                ordered_products.append((product.name, count,))
+                try:
+                    ordered_product = OrderedProduct.create_ordered_product(product.name, count, )
+                    ordered_products.append(ordered_product)
+                    ordered_product.save()
+                except ValueError as e:
+                    self.stdout.write(self.style.ERROR(str(e)))
+                    continue
             try:
                 Order.create_order(client, ordered_products)
-            except Exception as e:
+            except ValueError as e:
                 self.stdout.write(self.style.ERROR(str(e)))
                 continue
             created_count += 1

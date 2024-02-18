@@ -12,7 +12,8 @@ class Command(BaseCommand):
         parser.add_argument('count', type=int)
 
     def random_date(self):
-        return f'{random.randint(1, 28)}.{random.randint(1, 12)}.{random.randint(1000, 2000)}'
+        """Генерация случайной даты типа YYYY-MM-DD"""
+        return f'{random.randint(1000, 2000)}-{random.randint(1, 12)}-{random.randint(1, 28)}'
 
     def handle(self, *args, **options):
         count = options['count']

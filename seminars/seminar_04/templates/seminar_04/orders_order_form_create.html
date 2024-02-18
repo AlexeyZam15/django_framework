@@ -3,11 +3,9 @@
 
 {% block content %}
 <form action="" method="post">
-    <p>Заказанные товары: {% for product_name,product_count in ordered_products %}
-        {{ product_name }}({{ product_count }}) <a class="btn btn-danger" role="button"
-                                                   href="{% url 'order_create_product_delete' product_name %}"> X </a></p>
-    {% endfor %}
-    <a class="btn btn-primary" role="button" href="{% url 'order_create_product_add'%}"> Добавить товар </a></p>
+    <a class="btn btn-primary" role="button" href="{% url 'order_create_product_add'%}"> Добавить товар в
+        корзину </a></p>
+    <a class="btn btn-danger" role="button" href="{% url 'order_create_all_products_delete'%}" onclick="return confirm('Вы уверены?')"> Очистить корзину </a></p>
 
     {% csrf_token %}
     {{ form.as_div }}
