@@ -144,3 +144,7 @@ def order_full(request, order_id):
         'order': order,
     }
     return render(request, 'homework_03/order.html', context)
+
+
+def index(request):
+    return render(request, 'homework_03/index.html')
