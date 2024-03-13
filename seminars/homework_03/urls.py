@@ -1,9 +1,10 @@
 from django.urls import path
 
 from .views import ordered_items_by_time_in_days, product_orders, product_full, get_clients, client_full, get_products, \
-    order_full
+    order_full, index
 
 urlpatterns = [
+    path('', index, name='main'),
     path('client/<int:client_id>/ordered_products/', ordered_items_by_time_in_days,
          name='ordered_products'),
     path('client/<int:client_id>/ordered_products/days/<int:days>/', ordered_items_by_time_in_days,

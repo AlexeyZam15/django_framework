@@ -25730,3 +25730,39 @@ INFO 2024-02-18 19:24:53,509 basehttp log_message "GET /admin/homework_02/produc
 INFO 2024-02-18 19:24:53,733 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 INFO 2024-02-18 19:25:12,053 basehttp log_message "GET /admin/homework_02/orderedproduct/ HTTP/1.1" 200 23964
 INFO 2024-02-18 19:25:12,295 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-03-13 17:18:34,578 autoreload run_with_reloader Watching for file changes with StatReloader
+WARNING 2024-03-13 17:18:46,901 log log_response Not Found: /
+WARNING 2024-03-13 17:18:46,902 basehttp log_message "GET / HTTP/1.1" 404 2744
+WARNING 2024-03-13 17:18:47,403 log log_response Not Found: /favicon.ico
+WARNING 2024-03-13 17:18:47,404 basehttp log_message "GET /favicon.ico HTTP/1.1" 404 2795
+WARNING 2024-03-13 17:18:53,597 log log_response Not Found: /homework_03
+WARNING 2024-03-13 17:18:53,598 basehttp log_message "GET /homework_03 HTTP/1.1" 404 2795
+WARNING 2024-03-13 17:19:08,066 log log_response Not Found: /homework_03/
+WARNING 2024-03-13 17:19:08,067 basehttp log_message "GET /homework_03/ HTTP/1.1" 404 4635
+INFO 2024-03-13 17:20:11,955 basehttp log_message "GET /homework_03/clients HTTP/1.1" 301 0
+INFO 2024-03-13 17:20:12,220 basehttp log_message "GET /homework_03/clients/ HTTP/1.1" 200 3219
+INFO 2024-03-13 17:22:09,804 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-13 17:22:13,939 basehttp log_message "GET /homework_03/ HTTP/1.1" 200 582
+INFO 2024-03-13 17:22:16,531 basehttp log_message "GET /homework_03/clients/ HTTP/1.1" 200 3219
+INFO 2024-03-13 17:22:17,405 basehttp log_message "GET /homework_03/products/ HTTP/1.1" 200 5168
+INFO 2024-03-13 17:22:17,988 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 18275
+INFO 2024-03-13 17:22:18,922 basehttp log_message "GET /homework_03/clients/ HTTP/1.1" 200 3219
+INFO 2024-03-13 17:22:19,872 basehttp log_message "GET /homework_03/products/ HTTP/1.1" 200 5168
+INFO 2024-03-13 17:22:20,485 basehttp log_message "GET /homework_03/clients/ HTTP/1.1" 200 3219
+INFO 2024-03-13 17:22:45,001 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-13 17:22:47,435 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 18275
+INFO 2024-03-13 17:22:49,510 basehttp log_message "GET /seminar_03/orders/days/7 HTTP/1.1" 200 1479
+INFO 2024-03-13 17:22:50,303 basehttp log_message "GET /seminar_03/orders/days/30 HTTP/1.1" 200 18347
+INFO 2024-03-13 17:22:51,152 basehttp log_message "GET /seminar_03/orders/days/7 HTTP/1.1" 200 1479
+INFO 2024-03-13 17:22:52,547 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 18275
+INFO 2024-03-13 17:22:53,485 basehttp log_message "GET /seminar_03/orders/days/30 HTTP/1.1" 200 18347
+INFO 2024-03-13 17:22:54,619 basehttp log_message "GET /seminar_03/orders/days/365 HTTP/1.1" 200 18349
+INFO 2024-03-13 17:22:56,311 basehttp log_message "GET /seminar_03/orders/days/30 HTTP/1.1" 200 18347
+INFO 2024-03-13 17:22:57,136 basehttp log_message "GET /seminar_03/orders/days/365 HTTP/1.1" 200 18349
+INFO 2024-03-13 17:22:58,003 basehttp log_message "GET /seminar_03/orders/days/30 HTTP/1.1" 200 18347
+INFO 2024-03-13 17:22:58,469 basehttp log_message "GET /seminar_03/orders/days/365 HTTP/1.1" 200 18349
+INFO 2024-03-13 17:23:00,954 basehttp log_message "GET /seminar_03/orders/days/30 HTTP/1.1" 200 18347
+INFO 2024-03-13 17:23:01,508 basehttp log_message "GET /seminar_03/orders/days/365 HTTP/1.1" 200 18349
+INFO 2024-03-13 17:23:08,454 basehttp log_message "GET /homework_03/products/ HTTP/1.1" 200 5168
+INFO 2024-03-13 17:23:09,604 basehttp log_message "GET /homework_03/clients/ HTTP/1.1" 200 3219
+INFO 2024-03-13 17:23:10,663 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 18275
