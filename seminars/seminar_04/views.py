@@ -158,10 +158,6 @@ def product_create(request):
     if request.method == 'POST':
         if form.is_valid():
             product = form.save()
-            product_photo = form.cleaned_data['photo']
-            fs = FileSystemStorage()
-            fs.save(product_photo.name, product_photo)
-            product.photo = product_photo
             logger.info(f'Создан товар: {product}.')
             return redirect('product_full', product.id)
     context = {'title': 'Создание товара',

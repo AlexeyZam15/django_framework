@@ -2,6 +2,7 @@ from django.urls import path
 from .views import games_choose, author_create, article_create, client_create, product_create, order_create, \
     author_update, article_update, client_update, product_update, order_create_product_add, order_delete, \
     product_delete, client_delete, order_create_all_products_delete
+from homework_03.views import index
 from seminar_03.views import article_full
 
 urlpatterns = [
@@ -21,5 +22,5 @@ urlpatterns = [
     path('authors/<int:author_id>/update/', author_update, name='author_update'),
     path('articles/<int:article_id>/update/', article_update, name='article_update'),
     path('articles/<int:article_id>/comment/<int:comment_id>/update', article_full, name='comment_update'),
-
+    path('', index, name='index'),
 ]
