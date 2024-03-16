@@ -1,3 +1,4 @@
+from django.db.models import Sum, F
 from django.shortcuts import render, get_object_or_404
 
 from datetime import timedelta, datetime
@@ -29,7 +30,7 @@ from datetime import timedelta, datetime
 Товары в списке не должны повторятся.
 """
 
-from homework_02.models import Client, Product, Order
+from homework_02.models import Client, Product, Order, OrderedProduct
 
 
 class ClientProduct:
@@ -42,9 +43,10 @@ class ClientProduct:
 
 def ordered_items_by_time_in_days(request, client_id, days=None):
     client = Client.objects.get(id=client_id)
-    client_orders = client.orders.all()
     if days:
-        client_orders = client_orders.filter(order_date__gte=datetime.now() - timedelta(days=days)).all()
+        client_orders = Order.objects.filter(client=client, order_date__gte=datetime.now() - timedelta(days=days))
+    else:
+        client_orders = client.orders.all()
     # Объединить записи с одинаковыми именами, в дате оставить ближайшее к сегодняшней дате значение,
     # количество товара суммировать
     ordered_products_dict = {}
@@ -76,8 +78,10 @@ def ordered_items_by_time_in_days(request, client_id, days=None):
         else:
             days_word = 'дней'
         title = f'Заказанные товары за последние {days} {days_word} клиентом {client.name}'
+    else:
+        title = f'Все заказанные товары клиентом {client.name}'
     context = {
-        'title': f'Все заказанные товары клиентом {client.name}',
+        'title': title,
         'columns': ['Название', 'Количество', 'Итоговая стоимость', 'Дата последнего заказа'],
         'client_products': client_products,
         'client_id': client_id,
