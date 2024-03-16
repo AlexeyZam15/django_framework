@@ -26225,3 +26225,9 @@ INFO 2024-03-16 20:02:59,607 autoreload trigger_reload C:\Users\wolfy\Downloads\
 INFO 2024-03-16 20:03:00,654 autoreload run_with_reloader Watching for file changes with StatReloader
 INFO 2024-03-16 20:04:15,241 autoreload trigger_reload C:\Users\wolfy\Downloads\django_framework\seminars\seminar_04\urls.py changed, reloading.
 INFO 2024-03-16 20:04:16,135 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-16 20:04:17,676 basehttp log_message "GET /seminar_04 HTTP/1.1" 301 0
+INFO 2024-03-16 20:04:17,715 basehttp log_message "GET /seminar_04/ HTTP/1.1" 200 582
+INFO 2024-03-16 20:04:19,431 basehttp log_message "GET /homework_03/clients/ HTTP/1.1" 200 3219
+INFO 2024-03-16 20:04:19,889 basehttp log_message "GET /homework_03/products/ HTTP/1.1" 200 5557
+INFO 2024-03-16 20:04:20,335 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 18622
+INFO 2024-03-16 20:04:20,658 basehttp log_message "GET /homework_03/clients/ HTTP/1.1" 200 3219
