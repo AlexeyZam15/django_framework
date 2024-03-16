@@ -26189,3 +26189,21 @@ INFO 2024-03-16 19:45:11,861 basehttp log_message "GET /homework_03/client/138/o
 INFO 2024-03-16 19:45:12,093 basehttp log_message "GET /homework_03/client/138/ordered_products/days/365/ HTTP/1.1" 200 2296
 INFO 2024-03-16 19:45:12,390 basehttp log_message "GET /homework_03/client/138/ordered_products/days/7/ HTTP/1.1" 200 1758
 INFO 2024-03-16 19:45:12,629 basehttp log_message "GET /homework_03/client/138/ordered_products/ HTTP/1.1" 200 2236
+INFO 2024-03-16 19:52:58,308 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-16 19:53:00,099 basehttp log_message "GET /homework_03/products/ HTTP/1.1" 200 5169
+INFO 2024-03-16 19:53:01,288 basehttp log_message "GET /homework_03/product/268 HTTP/1.1" 200 1200
+INFO 2024-03-16 19:53:04,097 basehttp log_message "GET /homework_03/product/272 HTTP/1.1" 200 1197
+INFO 2024-03-16 19:53:06,269 basehttp log_message "GET /homework_03/product/266 HTTP/1.1" 200 1198
+INFO 2024-03-16 19:53:17,071 basehttp log_message "GET /seminar_04/products/create/ HTTP/1.1" 200 1602
+INFO 2024-03-16 19:53:26,178 views product_create Создан товар: name: sdf description: sdfsd price: 14 count: 4 date_added: 2024-03-16 19:53:26.
+INFO 2024-03-16 19:53:26,179 basehttp log_message "POST /seminar_04/products/create/ HTTP/1.1" 302 0
+INFO 2024-03-16 19:53:26,250 basehttp log_message "GET /homework_03/product/279 HTTP/1.1" 200 1206
+INFO 2024-03-16 19:53:26,722 basehttp log_message "GET /media/photos/favicon.png HTTP/1.1" 200 1283
+INFO 2024-03-16 19:54:32,697 basehttp log_message "GET /homework_03/product/279 HTTP/1.1" 200 1206
+INFO 2024-03-16 19:54:32,745 basehttp log_message "GET /media/photos/favicon.png HTTP/1.1" 304 0
+INFO 2024-03-16 19:54:33,377 basehttp log_message "GET /homework_03/product/279 HTTP/1.1" 200 1206
+INFO 2024-03-16 19:54:33,528 basehttp log_message "GET /homework_03/product/279 HTTP/1.1" 200 1206
+INFO 2024-03-16 19:54:33,665 basehttp log_message "GET /homework_03/product/279 HTTP/1.1" 200 1206
+INFO 2024-03-16 19:54:33,856 basehttp log_message "GET /homework_03/product/279 HTTP/1.1" 200 1206
+INFO 2024-03-16 19:55:28,560 autoreload trigger_reload C:\Users\wolfy\Downloads\django_framework\seminars\seminar_04\views.py changed, reloading.
+INFO 2024-03-16 19:55:29,736 autoreload run_with_reloader Watching for file changes with StatReloader
