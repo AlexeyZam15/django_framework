@@ -26231,3 +26231,81 @@ INFO 2024-03-16 20:04:19,431 basehttp log_message "GET /homework_03/clients/ HTT
 INFO 2024-03-16 20:04:19,889 basehttp log_message "GET /homework_03/products/ HTTP/1.1" 200 5557
 INFO 2024-03-16 20:04:20,335 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 18622
 INFO 2024-03-16 20:04:20,658 basehttp log_message "GET /homework_03/clients/ HTTP/1.1" 200 3219
+INFO 2024-03-19 18:43:23,795 autoreload run_with_reloader Watching for file changes with StatReloader
+WARNING 2024-03-19 18:44:49,285 log log_response Not Found: /
+WARNING 2024-03-19 18:44:49,286 basehttp log_message "GET / HTTP/1.1" 404 2744
+WARNING 2024-03-19 18:44:50,351 log log_response Not Found: /favicon.ico
+WARNING 2024-03-19 18:44:50,351 basehttp log_message "GET /favicon.ico HTTP/1.1" 404 2795
+INFO 2024-03-19 18:44:51,653 basehttp log_message "GET /admin HTTP/1.1" 301 0
+INFO 2024-03-19 18:44:51,737 basehttp log_message "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-03-19 18:44:51,902 basehttp log_message "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158
+INFO 2024-03-19 18:44:52,411 basehttp log_message "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2024-03-19 18:44:52,433 basehttp log_message "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2024-03-19 18:44:52,462 basehttp log_message "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2024-03-19 18:44:52,467 basehttp log_message "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+INFO 2024-03-19 18:44:52,467 basehttp log_message "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2024-03-19 18:44:52,479 basehttp log_message "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+INFO 2024-03-19 18:44:52,523 basehttp log_message "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2024-03-19 18:44:59,792 basehttp log_message "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-03-19 18:44:59,983 basehttp log_message "GET /admin/ HTTP/1.1" 200 13588
+INFO 2024-03-19 18:45:00,049 basehttp log_message "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2024-03-19 18:45:00,217 basehttp log_message "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2024-03-19 18:45:00,218 basehttp log_message "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2024-03-19 18:45:20,712 basehttp log_message "GET /admin/homework_02/product/ HTTP/1.1" 200 20749
+INFO 2024-03-19 18:45:20,788 basehttp log_message "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2024-03-19 18:45:20,811 basehttp log_message "GET /static/admin/css/changelists.css HTTP/1.1" 200 6811
+INFO 2024-03-19 18:45:20,832 basehttp log_message "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2024-03-19 18:45:20,835 basehttp log_message "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2024-03-19 18:45:20,857 basehttp log_message "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2024-03-19 18:45:20,857 basehttp log_message "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2024-03-19 18:45:20,900 basehttp log_message "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2024-03-19 18:45:20,941 basehttp log_message "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2024-03-19 18:45:21,111 basehttp log_message "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2024-03-19 18:45:21,353 basehttp log_message "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2024-03-19 18:45:21,417 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-03-19 18:45:21,446 basehttp log_message "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2024-03-19 18:45:21,475 basehttp log_message "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2024-03-19 18:45:21,532 basehttp log_message "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2024-03-19 18:45:26,233 basehttp log_message "GET /admin/homework_02/product/280/change/ HTTP/1.1" 200 14578
+INFO 2024-03-19 18:45:26,290 basehttp log_message "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2024-03-19 18:45:26,295 basehttp log_message "GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+INFO 2024-03-19 18:45:26,447 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-03-19 18:45:26,500 basehttp log_message "GET /static/admin/css/widgets.css HTTP/1.1" 200 11800
+INFO 2024-03-19 18:45:26,534 basehttp log_message "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2024-03-19 18:45:26,565 basehttp log_message "GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 200 280
+INFO 2024-03-19 18:45:29,928 basehttp log_message "GET /media/photos/logo-01.png HTTP/1.1" 200 3144
+INFO 2024-03-19 18:45:31,730 basehttp log_message "GET /admin/homework_02/product/280/change/ HTTP/1.1" 200 14578
+INFO 2024-03-19 18:45:32,739 basehttp log_message "GET /admin/homework_02/product/ HTTP/1.1" 200 20749
+INFO 2024-03-19 18:46:05,954 basehttp log_message "GET /admin/homework_02/orderedproduct/ HTTP/1.1" 200 24098
+INFO 2024-03-19 18:46:06,275 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-03-19 18:46:06,308 basehttp log_message "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2024-03-19 18:47:29,609 basehttp log_message "GET /admin/homework_02/client/ HTTP/1.1" 200 19156
+INFO 2024-03-19 18:47:29,827 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-03-19 18:47:47,346 basehttp log_message "GET /admin/homework_02/product/ HTTP/1.1" 200 20749
+INFO 2024-03-19 18:47:47,546 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-03-19 18:49:46,610 autoreload trigger_reload C:\Users\wolfy\Downloads\django_framework\seminars\seminar_05\admin.py changed, reloading.
+INFO 2024-03-19 18:49:48,290 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-19 18:50:24,592 autoreload trigger_reload C:\Users\wolfy\Downloads\django_framework\seminars\seminar_05\admin.py changed, reloading.
+INFO 2024-03-19 18:50:25,745 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-19 18:52:23,467 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-19 18:53:41,530 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-19 18:53:56,574 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-19 18:54:00,289 basehttp log_message "GET /admin/homework_02/product/ HTTP/1.1" 200 21889
+INFO 2024-03-19 18:54:00,531 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-03-19 18:54:01,120 basehttp log_message "GET /media/photos/favicon.png HTTP/1.1" 200 1283
+INFO 2024-03-19 18:54:10,785 autoreload trigger_reload C:\Users\wolfy\Downloads\django_framework\seminars\seminar_05\admin.py changed, reloading.
+INFO 2024-03-19 18:54:11,831 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-19 18:54:13,104 basehttp log_message "GET /admin/homework_02/product/ HTTP/1.1" 200 21891
+INFO 2024-03-19 18:54:13,454 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-03-19 18:55:24,136 autoreload trigger_reload C:\Users\wolfy\Downloads\django_framework\seminars\seminar_05\admin.py changed, reloading.
+INFO 2024-03-19 18:55:25,021 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-19 18:55:26,730 basehttp log_message "GET /admin/homework_02/product/ HTTP/1.1" 200 21889
+INFO 2024-03-19 18:55:26,946 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-03-19 18:55:31,287 autoreload trigger_reload C:\Users\wolfy\Downloads\django_framework\seminars\seminar_05\admin.py changed, reloading.
+INFO 2024-03-19 18:55:32,242 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-19 18:55:33,423 basehttp log_message "GET /admin/homework_02/product/ HTTP/1.1" 200 21891
+INFO 2024-03-19 18:55:33,686 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-03-19 18:56:20,519 autoreload trigger_reload C:\Users\wolfy\Downloads\django_framework\seminars\seminar_05\admin.py changed, reloading.
+INFO 2024-03-19 18:56:21,617 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-19 18:56:34,167 basehttp log_message "GET /admin/homework_02/product/280/change/ HTTP/1.1" 200 15164
+INFO 2024-03-19 18:56:34,438 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342

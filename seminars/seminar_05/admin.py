@@ -2,6 +2,8 @@ from django.contrib import admin, messages
 
 import logging
 
+from django.utils.safestring import mark_safe
+
 # Register your models here.
 
 """
@@ -93,12 +95,17 @@ class ClientAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'price', 'count', 'date_added')
+    list_display = ('name', 'description', 'show_photo', 'price', 'count', 'date_added')
     search_fields = ('name', 'description', 'price', 'count', 'date_added')
     list_per_page = 15
     ordering = ('-date_added',)
-    readonly_fields = ['date_added']
+    readonly_fields = ['show_photo', 'date_added']
 
+    @admin.display(description='Фото')
+    def show_photo(self, product: Product):
+        if product.photo:
+            return mark_safe(f'<img src="{product.photo.url}" width="100">')
+        return 'Фото отсутствует'
 
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('id', 'full_name', 'email', 'bio', 'birth_date', 'reg_date', 'change_date')
