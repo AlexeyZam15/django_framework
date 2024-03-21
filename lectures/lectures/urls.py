@@ -25,4 +25,6 @@ urlpatterns = [
     path('lec3/', include('lecture_03.urls')),
     path('', index),
     path('lec4/', include('lecture_04.urls')),
+    # path("__debug__/", include("debug_toolbar.urls")),
+    path('lec6/', include('lecture_06.urls')),
 ]
