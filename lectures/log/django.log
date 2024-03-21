@@ -615,3 +615,122 @@ WARNING 2024-02-15 01:01:49,647 log 72416 21348 Not Found: /homework_03/product/
 WARNING 2024-02-15 01:01:49,647 basehttp 72416 21348 "GET /homework_03/product/25 HTTP/1.1" 404 2562
 WARNING 2024-02-15 01:01:51,516 log 72416 21348 Not Found: /homework_03/products/
 WARNING 2024-02-15 01:01:51,517 basehttp 72416 21348 "GET /homework_03/products/ HTTP/1.1" 404 2559
+INFO 2024-03-20 16:56:56,296 autoreload 15140 10084 Watching for file changes with StatReloader
+INFO 2024-03-20 16:56:58,745 basehttp 15140 40060 "GET / HTTP/1.1" 200 10070
+INFO 2024-03-20 16:56:58,800 basehttp 15140 40060 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2024-03-20 16:56:58,805 basehttp 15140 5792 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+INFO 2024-03-20 16:56:58,811 basehttp 15140 40060 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2024-03-20 16:56:58,845 basehttp 15140 40060 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+INFO 2024-03-20 16:57:20,695 basehttp 15140 40060 "GET /__debug__/render_panel/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&panel_id=HistoryPanel HTTP/1.1" 200 2505
+INFO 2024-03-20 16:57:20,715 basehttp 15140 40060 "GET /static/debug_toolbar/js/history.js HTTP/1.1" 200 3515
+INFO 2024-03-20 16:57:25,062 basehttp 15140 40060 "GET /__debug__/history_sidebar/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&exclude_history=True HTTP/1.1" 200 10774
+INFO 2024-03-20 16:57:28,374 basehttp 15140 40060 "GET /__debug__/history_sidebar/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&exclude_history=True HTTP/1.1" 200 10774
+INFO 2024-03-20 16:57:28,526 basehttp 15140 40060 "GET /__debug__/history_sidebar/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&exclude_history=True HTTP/1.1" 200 10774
+INFO 2024-03-20 16:57:28,669 basehttp 15140 40060 "GET /__debug__/history_sidebar/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&exclude_history=True HTTP/1.1" 200 10774
+INFO 2024-03-20 16:57:28,854 basehttp 15140 40060 "GET /__debug__/history_sidebar/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&exclude_history=True HTTP/1.1" 200 10774
+INFO 2024-03-20 16:57:35,882 basehttp 15140 40060 "GET /__debug__/render_panel/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&panel_id=VersionsPanel HTTP/1.1" 200 760
+INFO 2024-03-20 16:57:51,098 basehttp 15140 40060 "GET /__debug__/render_panel/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&panel_id=SettingsPanel HTTP/1.1" 200 27145
+INFO 2024-03-20 16:58:11,564 basehttp 15140 40060 "GET /__debug__/render_panel/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&panel_id=HeadersPanel HTTP/1.1" 200 5593
+INFO 2024-03-20 16:59:26,396 basehttp 15140 40060 "GET /__debug__/render_panel/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&panel_id=RequestPanel HTTP/1.1" 200 1610
+INFO 2024-03-20 17:00:10,693 basehttp 15140 40060 "GET /__debug__/render_panel/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&panel_id=SQLPanel HTTP/1.1" 200 428
+INFO 2024-03-20 17:00:47,534 basehttp 15140 40060 "GET /__debug__/render_panel/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&panel_id=StaticFilesPanel HTTP/1.1" 200 34329
+INFO 2024-03-20 17:01:16,306 basehttp 15140 40060 "GET /__debug__/render_panel/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&panel_id=TemplatesPanel HTTP/1.1" 200 6540
+INFO 2024-03-20 17:01:38,080 basehttp 15140 40060 "GET /__debug__/render_panel/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&panel_id=SignalsPanel HTTP/1.1" 200 2231
+INFO 2024-03-20 17:01:38,442 basehttp 15140 40060 "GET /__debug__/render_panel/?store_id=b7ce67d34b1e4e7794ce0ae4c3db642a&panel_id=CachePanel HTTP/1.1" 200 1737
+WARNING 2024-03-20 17:02:51,506 log 15140 40060 Not Found: /lecture_04/
+WARNING 2024-03-20 17:02:51,507 basehttp 15140 40060 "GET /lecture_04/ HTTP/1.1" 404 12877
+INFO 2024-03-20 17:02:51,556 basehttp 15140 40060 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2024-03-20 17:02:51,556 basehttp 15140 29096 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2024-03-20 17:02:51,603 basehttp 15140 29096 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2024-03-20 17:02:51,640 basehttp 15140 29096 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2024-03-20 17:02:56,996 log 15140 29096 Not Found: /lect4/
+WARNING 2024-03-20 17:02:56,996 basehttp 15140 29096 "GET /lect4/ HTTP/1.1" 404 12856
+WARNING 2024-03-20 17:03:01,275 log 15140 29096 Not Found: /lec4/
+WARNING 2024-03-20 17:03:01,275 basehttp 15140 29096 "GET /lec4/ HTTP/1.1" 404 13658
+INFO 2024-03-20 17:03:12,904 basehttp 15140 29096 "GET /lec4/user/add HTTP/1.1" 200 10873
+INFO 2024-03-20 17:03:12,967 basehttp 15140 40060 "GET /static/debug_toolbar/js/redirect.js HTTP/1.1" 200 48
+INFO 2024-03-20 17:03:18,535 basehttp 15140 40060 "GET /lec4/user/add/ HTTP/1.1" 200 11060
+INFO 2024-03-20 17:03:25,035 basehttp 15140 40060 "GET /__debug__/render_panel/?store_id=62660b24f53846908f740a3f6c810cae&panel_id=ProfilingPanel HTTP/1.1" 200 34745
+INFO 2024-03-20 19:56:46,078 autoreload 42720 2248 Watching for file changes with StatReloader
+WARNING 2024-03-20 19:57:17,488 log 42720 39976 Not Found: /lec6/
+WARNING 2024-03-20 19:57:17,489 basehttp 42720 39976 "GET /lec6/ HTTP/1.1" 404 13366
+INFO 2024-03-20 19:57:17,581 basehttp 42720 39976 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2024-03-20 19:57:17,582 basehttp 42720 15104 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2024-03-20 19:57:17,643 basehttp 42720 15104 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2024-03-20 19:57:17,708 basehttp 42720 15104 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2024-03-20 19:57:38,644 basehttp 42720 15104 "GET /lec6/db HTTP/1.1" 200 10855
+INFO 2024-03-20 19:57:38,714 basehttp 42720 39976 "GET /static/debug_toolbar/js/redirect.js HTTP/1.1" 200 48
+INFO 2024-03-20 19:57:56,897 basehttp 42720 39976 "GET /lec6/db/ HTTP/1.1" 200 10619
+INFO 2024-03-20 19:58:28,120 basehttp 42720 39976 "GET /__debug__/render_panel/?store_id=c910f1e80a5a47d1a06e0738d16d6889&panel_id=RequestPanel HTTP/1.1" 200 1828
+INFO 2024-03-20 19:58:31,070 basehttp 42720 39976 "GET /__debug__/render_panel/?store_id=c910f1e80a5a47d1a06e0738d16d6889&panel_id=SQLPanel HTTP/1.1" 200 5425
+ERROR 2024-03-20 19:59:01,782 log 42720 39976 Internal Server Error: /lec6/view/
+Traceback (most recent call last):
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\lectures\lecture_06\views.py", line 22, in total_in_view
+    return render(request, 'myapp6/total_count.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp6/total_count.html
+ERROR 2024-03-20 19:59:01,854 basehttp 42720 39976 "GET /lec6/view/ HTTP/1.1" 500 99267
+INFO 2024-03-20 19:59:23,553 autoreload 42720 2248 C:\Users\wolfy\Downloads\django_framework\lectures\lecture_06\views.py changed, reloading.
+INFO 2024-03-20 19:59:24,637 autoreload 17796 31156 Watching for file changes with StatReloader
+INFO 2024-03-20 19:59:26,772 basehttp 17796 27564 "GET /lec6/view/ HTTP/1.1" 200 10605
+WARNING 2024-03-20 19:59:33,251 log 17796 27564 Not Found: /lec6/
+WARNING 2024-03-20 19:59:33,252 basehttp 17796 27564 "GET /lec6/ HTTP/1.1" 404 13366
+INFO 2024-03-20 19:59:36,867 basehttp 17796 27564 "GET /lec6/view/ HTTP/1.1" 200 10604
+INFO 2024-03-20 19:59:41,601 basehttp 17796 27564 "GET /__debug__/render_panel/?store_id=ab313d2bb933492e8c783218114a4453&panel_id=RequestPanel HTTP/1.1" 200 1672
+INFO 2024-03-20 19:59:42,505 basehttp 17796 27564 "GET /__debug__/render_panel/?store_id=ab313d2bb933492e8c783218114a4453&panel_id=SQLPanel HTTP/1.1" 200 6716
+INFO 2024-03-20 19:59:55,886 basehttp 17796 27564 "GET /__debug__/render_panel/?store_id=ab313d2bb933492e8c783218114a4453&panel_id=ProfilingPanel HTTP/1.1" 200 44699
+INFO 2024-03-20 20:00:22,851 basehttp 17796 27564 "GET /lec6/template/ HTTP/1.1" 200 10589
+WARNING 2024-03-20 20:00:29,725 log 17796 27564 Not Found: /lec6/
+WARNING 2024-03-20 20:00:29,726 basehttp 17796 27564 "GET /lec6/ HTTP/1.1" 404 13366
+INFO 2024-03-20 20:00:33,586 basehttp 17796 27564 "GET /lec6/template/ HTTP/1.1" 200 10588
+INFO 2024-03-20 20:00:37,223 basehttp 17796 27564 "GET /__debug__/render_panel/?store_id=12c0724d454a4ea18f917f7113b550aa&panel_id=SQLPanel HTTP/1.1" 200 25537
+INFO 2024-03-20 20:00:39,827 basehttp 17796 27564 "GET /__debug__/render_panel/?store_id=12c0724d454a4ea18f917f7113b550aa&panel_id=ProfilingPanel HTTP/1.1" 200 34777
+INFO 2024-03-20 20:00:46,352 basehttp 17796 27564 "GET /__debug__/render_panel/?store_id=12c0724d454a4ea18f917f7113b550aa&panel_id=TemplatesPanel HTTP/1.1" 200 7238
+WARNING 2024-03-20 20:01:08,006 log 17796 27564 Not Found: /lec6/
+WARNING 2024-03-20 20:01:08,007 basehttp 17796 27564 "GET /lec6/ HTTP/1.1" 404 13366
+INFO 2024-03-20 20:01:27,930 basehttp 17796 27564 "GET /lec6/db/ HTTP/1.1" 200 10618
+INFO 2024-03-20 20:01:34,542 basehttp 17796 27564 "GET /lec6/view/ HTTP/1.1" 200 10604
+INFO 2024-03-20 20:01:38,960 basehttp 17796 27564 "GET /lec6/template/ HTTP/1.1" 200 10588
+WARNING 2024-03-20 20:01:42,101 log 17796 27564 Not Found: /lec6/
+WARNING 2024-03-20 20:01:42,102 basehttp 17796 27564 "GET /lec6/ HTTP/1.1" 404 13366
+INFO 2024-03-20 20:01:42,558 basehttp 17796 27564 "GET /lec6/db HTTP/1.1" 200 10855
+INFO 2024-03-20 20:01:45,386 basehttp 17796 31820 "GET /lec6/db/ HTTP/1.1" 200 10618
+INFO 2024-03-20 20:01:46,986 basehttp 17796 31820 "GET /__debug__/render_panel/?store_id=ebc4b82f03ff49939618d12c750be849&panel_id=HistoryPanel HTTP/1.1" 200 22228
+INFO 2024-03-20 20:01:46,996 basehttp 17796 31820 "GET /static/debug_toolbar/js/history.js HTTP/1.1" 200 3515
+INFO 2024-03-20 20:01:53,707 basehttp 17796 31820 "GET /__debug__/history_refresh/?store_id=ebc4b82f03ff49939618d12c750be849&exclude_history=True HTTP/1.1" 200 21826
+INFO 2024-03-20 20:01:54,791 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=ebc4b82f03ff49939618d12c750be849&exclude_history=True HTTP/1.1" 200 11366
+INFO 2024-03-20 20:01:56,145 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=4a83e54194224a38b236e6c03f1129ca&exclude_history=True HTTP/1.1" 200 11332
+INFO 2024-03-20 20:01:56,559 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=99597b8ccc6f4542a7c546d859a20f25&exclude_history=True HTTP/1.1" 200 11344
+INFO 2024-03-20 20:01:58,296 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=ebc4b82f03ff49939618d12c750be849&exclude_history=True HTTP/1.1" 200 11366
+INFO 2024-03-20 20:01:58,438 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=ebc4b82f03ff49939618d12c750be849&exclude_history=True HTTP/1.1" 200 11366
+INFO 2024-03-20 20:02:00,284 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=4a83e54194224a38b236e6c03f1129ca&exclude_history=True HTTP/1.1" 200 11332
+INFO 2024-03-20 20:02:01,223 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=99597b8ccc6f4542a7c546d859a20f25&exclude_history=True HTTP/1.1" 200 11344
+INFO 2024-03-20 20:02:01,672 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=ca47f4b7a9d14d91b67393a7637ec07f&exclude_history=True HTTP/1.1" 200 11372
+INFO 2024-03-20 20:02:02,094 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=877f6f428b5b4540a047eaa5f55284fd&exclude_history=True HTTP/1.1" 200 11368
+INFO 2024-03-20 20:02:04,496 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=ebc4b82f03ff49939618d12c750be849&exclude_history=True HTTP/1.1" 200 11366
+INFO 2024-03-20 20:02:05,030 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=4a83e54194224a38b236e6c03f1129ca&exclude_history=True HTTP/1.1" 200 11332
+INFO 2024-03-20 20:02:05,672 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=99597b8ccc6f4542a7c546d859a20f25&exclude_history=True HTTP/1.1" 200 11344
+INFO 2024-03-20 20:02:06,218 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=ca47f4b7a9d14d91b67393a7637ec07f&exclude_history=True HTTP/1.1" 200 11372
+INFO 2024-03-20 20:02:06,727 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=877f6f428b5b4540a047eaa5f55284fd&exclude_history=True HTTP/1.1" 200 11368
+INFO 2024-03-20 20:02:07,175 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=e3d42459ad46443fbbcdbf373a53ad56&exclude_history=True HTTP/1.1" 200 11366
+INFO 2024-03-20 20:02:08,072 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=c345e9680d8b41cc92d8a282d293925f&exclude_history=True HTTP/1.1" 200 11344
+INFO 2024-03-20 20:02:08,375 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=12c0724d454a4ea18f917f7113b550aa&exclude_history=True HTTP/1.1" 200 11372
+INFO 2024-03-20 20:02:09,304 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=97207d04adff42da8be766b00e929fbd&exclude_history=True HTTP/1.1" 200 11344
+INFO 2024-03-20 20:02:09,575 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=4a3a790aac8c4298aaadc693f1714906&exclude_history=True HTTP/1.1" 200 11372
+INFO 2024-03-20 20:02:09,862 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=ab313d2bb933492e8c783218114a4453&exclude_history=True HTTP/1.1" 200 11368
+INFO 2024-03-20 20:02:10,215 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=e895ad73ed3145e5ac7e91e009b86307&exclude_history=True HTTP/1.1" 200 11344
+INFO 2024-03-20 20:02:10,463 basehttp 17796 31820 "GET /__debug__/history_sidebar/?store_id=c57cf30060734fe38e748c1d8d12d2c8&exclude_history=True HTTP/1.1" 200 11368
