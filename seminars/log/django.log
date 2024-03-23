@@ -26382,3 +26382,22 @@ INFO 2024-03-23 16:59:03,051 basehttp log_message "GET /seminar_03/authors/ HTTP
 INFO 2024-03-23 16:59:05,537 basehttp log_message "GET /__debug__/render_panel/?store_id=b4a9621daf4244c199f74bcefa12e8a5&panel_id=SQLPanel HTTP/1.1" 200 420785
 INFO 2024-03-23 16:59:23,466 basehttp log_message "GET /__debug__/render_panel/?store_id=b4a9621daf4244c199f74bcefa12e8a5&panel_id=SignalsPanel HTTP/1.1" 200 2152
 INFO 2024-03-23 16:59:25,018 basehttp log_message "GET /__debug__/render_panel/?store_id=b4a9621daf4244c199f74bcefa12e8a5&panel_id=ProfilingPanel HTTP/1.1" 200 34533
+INFO 2024-03-23 18:52:03,593 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-23 18:52:06,564 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 18:52:07,089 basehttp log_message "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2024-03-23 18:52:08,055 basehttp log_message "GET /seminar_03/authors/ HTTP/1.1" 200 12541
+INFO 2024-03-23 18:52:09,293 basehttp log_message "GET /seminar_04/games/ HTTP/1.1" 200 10872
+INFO 2024-03-23 18:52:10,313 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 18:52:17,938 basehttp log_message "GET /homework_03/ HTTP/1.1" 200 10010
+INFO 2024-03-23 18:52:19,403 basehttp log_message "GET /homework_03/products/ HTTP/1.1" 200 13590
+INFO 2024-03-23 18:52:20,535 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 14380
+INFO 2024-03-23 18:52:22,227 basehttp log_message "GET /homework_03/clients/ HTTP/1.1" 200 12667
+INFO 2024-03-23 18:52:22,983 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 14380
+INFO 2024-03-23 18:52:24,640 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 14379
+INFO 2024-03-23 18:53:51,237 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 18259
+INFO 2024-03-23 18:53:54,254 basehttp log_message "GET /homework_03/products/ HTTP/1.1" 200 13587
+INFO 2024-03-23 18:53:56,127 basehttp log_message "GET /homework_03/clients/ HTTP/1.1" 200 12667
+INFO 2024-03-23 18:53:59,379 basehttp log_message "GET /homework_03/clients/167/ HTTP/1.1" 200 10693
+INFO 2024-03-23 18:54:01,357 basehttp log_message "GET /homework_03/client/167/ordered_products/ HTTP/1.1" 200 11374
+INFO 2024-03-23 18:54:03,762 basehttp log_message "GET /seminar_03/orders/client/167/ HTTP/1.1" 200 11655
+INFO 2024-03-23 18:54:06,379 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 18259
