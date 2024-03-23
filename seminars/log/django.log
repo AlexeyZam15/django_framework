@@ -26359,3 +26359,26 @@ INFO 2024-03-23 14:16:12,216 autoreload run_with_reloader Watching for file chan
 INFO 2024-03-23 14:23:14,166 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
 INFO 2024-03-23 14:23:19,993 basehttp log_message "GET /seminar_03/articles/71/ HTTP/1.1" 200 15968
 INFO 2024-03-23 14:23:34,063 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 16:56:28,526 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-23 16:56:32,590 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 16:56:32,673 basehttp log_message "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+INFO 2024-03-23 16:56:32,673 basehttp log_message "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2024-03-23 16:56:51,735 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 16:57:19,204 basehttp log_message "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2024-03-23 16:57:19,209 basehttp log_message "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+INFO 2024-03-23 16:57:27,123 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 16:57:28,939 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 16:57:34,466 basehttp log_message "GET /__debug__/render_panel/?store_id=46258f913ace46e4ad0229a87c7e161b&panel_id=SQLPanel HTTP/1.1" 200 602405
+INFO 2024-03-23 16:58:06,481 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 16:58:08,211 basehttp log_message "GET /__debug__/render_panel/?store_id=8c622e10e5784bd5a2c2407902d7d44a&panel_id=SQLPanel HTTP/1.1" 200 602411
+INFO 2024-03-23 16:58:12,035 basehttp log_message "POST /__debug__/sql_select/ HTTP/1.1" 200 14841
+INFO 2024-03-23 16:58:20,581 basehttp log_message "POST /__debug__/sql_explain/ HTTP/1.1" 200 2119
+INFO 2024-03-23 16:58:47,705 basehttp log_message "GET /__debug__/render_panel/?store_id=8c622e10e5784bd5a2c2407902d7d44a&panel_id=StaticFilesPanel HTTP/1.1" 200 33815
+INFO 2024-03-23 16:58:48,111 basehttp log_message "GET /__debug__/render_panel/?store_id=8c622e10e5784bd5a2c2407902d7d44a&panel_id=TemplatesPanel HTTP/1.1" 200 7878
+INFO 2024-03-23 16:58:48,446 basehttp log_message "GET /__debug__/render_panel/?store_id=8c622e10e5784bd5a2c2407902d7d44a&panel_id=CachePanel HTTP/1.1" 200 1413
+INFO 2024-03-23 16:58:50,996 basehttp log_message "GET /__debug__/render_panel/?store_id=8c622e10e5784bd5a2c2407902d7d44a&panel_id=SignalsPanel HTTP/1.1" 200 2152
+INFO 2024-03-23 16:58:54,934 basehttp log_message "GET /__debug__/render_panel/?store_id=8c622e10e5784bd5a2c2407902d7d44a&panel_id=ProfilingPanel HTTP/1.1" 200 34537
+INFO 2024-03-23 16:59:03,051 basehttp log_message "GET /seminar_03/authors/ HTTP/1.1" 200 12541
+INFO 2024-03-23 16:59:05,537 basehttp log_message "GET /__debug__/render_panel/?store_id=b4a9621daf4244c199f74bcefa12e8a5&panel_id=SQLPanel HTTP/1.1" 200 420785
+INFO 2024-03-23 16:59:23,466 basehttp log_message "GET /__debug__/render_panel/?store_id=b4a9621daf4244c199f74bcefa12e8a5&panel_id=SignalsPanel HTTP/1.1" 200 2152
+INFO 2024-03-23 16:59:25,018 basehttp log_message "GET /__debug__/render_panel/?store_id=b4a9621daf4244c199f74bcefa12e8a5&panel_id=ProfilingPanel HTTP/1.1" 200 34533

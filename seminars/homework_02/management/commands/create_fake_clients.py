@@ -32,12 +32,14 @@ class Command(BaseCommand):
 
             last_id = test_client.id
             test_client.delete()
+        data = []
         for i in range(count):
             pk = last_id + i
-            Client.objects.create(
+            data.append(Client(
                 name=f'Client_{pk}',
                 email=f'client_{pk}@mail.ru',
                 phone=f'+7{random.randint(100000000, 999999999)}',
                 address=f'Address_{pk}'
-            )
+            ))
+        Client.objects.bulk_create(data)
         self.stdout.write(self.style.SUCCESS(f'Created {count} fake clients'))

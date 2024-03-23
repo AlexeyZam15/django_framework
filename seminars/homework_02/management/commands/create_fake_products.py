@@ -31,13 +31,15 @@ class Command(BaseCommand):
                 count=1)
             last_id = test.id
             test.delete()
+        data = []
         for i in range(count):
             pk = last_id + i
-            Product.objects.create(
+            data.append(Product(
                 name=f'Product_{pk}',
                 description=f'Description_{pk}',
                 price=random.randint(10, 1000),
                 count=random.randint(5, 70)
-            )
+            ))
+        Product.objects.bulk_create(data)
         self.stdout.write(self.style.SUCCESS(f'Created {count} fake products'))
         return
