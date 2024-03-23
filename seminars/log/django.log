@@ -26314,3 +26314,26 @@ INFO 2024-03-19 19:03:44,100 basehttp log_message "GET /admin/homework_02/produc
 INFO 2024-03-19 19:03:44,348 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 INFO 2024-03-19 19:03:47,263 basehttp log_message "GET /admin/homework_02/product/ HTTP/1.1" 200 21891
 INFO 2024-03-19 19:03:47,572 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-03-20 16:55:53,855 autoreload run_with_reloader Watching for file changes with StatReloader
+WARNING 2024-03-20 16:56:08,395 log log_response Not Found: /
+WARNING 2024-03-20 16:56:08,396 basehttp log_message "GET / HTTP/1.1" 404 2744
+INFO 2024-03-23 13:58:48,193 autoreload run_with_reloader Watching for file changes with StatReloader
+WARNING 2024-03-23 13:58:59,765 log log_response Not Found: /
+WARNING 2024-03-23 13:58:59,766 basehttp log_message "GET / HTTP/1.1" 404 12240
+INFO 2024-03-23 13:58:59,981 basehttp log_message "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2024-03-23 13:59:00,046 basehttp log_message "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2024-03-23 13:59:00,048 basehttp log_message "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+INFO 2024-03-23 13:59:00,139 basehttp log_message "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+INFO 2024-03-23 13:59:18,092 basehttp log_message "GET /seminar_04/ HTTP/1.1" 200 10010
+INFO 2024-03-23 13:59:45,294 basehttp log_message "GET /seminar_03/ HTTP/1.1" 200 10282
+INFO 2024-03-23 13:59:47,280 basehttp log_message "GET /seminar_04/games/ HTTP/1.1" 200 10872
+INFO 2024-03-23 13:59:57,737 views games_choose Выбрана игра "random_number", с количеством попыток: 100.
+INFO 2024-03-23 13:59:57,766 basehttp log_message "POST /seminar_04/games/ HTTP/1.1" 200 9972
+INFO 2024-03-23 13:59:57,810 basehttp log_message "GET /static/debug_toolbar/js/redirect.js HTTP/1.1" 200 48
+INFO 2024-03-23 14:00:03,649 basehttp log_message "GET /seminar_03/random_number/100 HTTP/1.1" 200 15911
+INFO 2024-03-23 14:06:08,735 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-23 14:06:23,542 basehttp log_message "GET /seminar_03/random_number/100 HTTP/1.1" 200 15912
+INFO 2024-03-23 14:06:27,205 basehttp log_message "GET /seminar_04/games/ HTTP/1.1" 200 10872
+INFO 2024-03-23 14:06:31,643 views games_choose Выбрана игра "random_number", с количеством попыток: 100.
+INFO 2024-03-23 14:06:31,672 basehttp log_message "POST /seminar_04/games/ HTTP/1.1" 200 9972
+INFO 2024-03-23 14:06:33,283 basehttp log_message "GET /seminar_03/random_number/100 HTTP/1.1" 200 15918

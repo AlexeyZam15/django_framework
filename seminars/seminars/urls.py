@@ -26,4 +26,5 @@ urlpatterns = [
                   path('seminar_03/', include('seminar_03.urls')),
                   path('homework_03/', include('homework_03.urls')),
                   path('seminar_04/', include('seminar_04.urls')),
+                  path('__debug__/', include("debug_toolbar.urls")),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
