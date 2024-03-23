@@ -82,10 +82,7 @@ def dice(request, count):
 
 
 def random_number(request, max_n=100, count=1):
-    res_list = []
-    for i in range(1, count + 1):
-        rnd = randint(1, max_n)
-        res_list.append((i, rnd,))
+    res_list = [(i, randint(1, max_n)) for i in range(1, count + 1)]
     table = DataFrame(res_list, columns=['Бросок', 'Результат'])
     context = {
         'title': f'Бросок до {max_n}',

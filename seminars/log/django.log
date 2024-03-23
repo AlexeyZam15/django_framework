@@ -26337,3 +26337,12 @@ INFO 2024-03-23 14:06:27,205 basehttp log_message "GET /seminar_04/games/ HTTP/1
 INFO 2024-03-23 14:06:31,643 views games_choose Выбрана игра "random_number", с количеством попыток: 100.
 INFO 2024-03-23 14:06:31,672 basehttp log_message "POST /seminar_04/games/ HTTP/1.1" 200 9972
 INFO 2024-03-23 14:06:33,283 basehttp log_message "GET /seminar_03/random_number/100 HTTP/1.1" 200 15918
+INFO 2024-03-23 14:07:10,427 basehttp log_message "GET /__debug__/render_panel/?store_id=19ee8dadf20a4bada14c4b10bfd0438d&panel_id=SQLPanel HTTP/1.1" 200 115
+INFO 2024-03-23 14:07:14,396 basehttp log_message "GET /__debug__/render_panel/?store_id=19ee8dadf20a4bada14c4b10bfd0438d&panel_id=StaticFilesPanel HTTP/1.1" 200 33815
+INFO 2024-03-23 14:07:15,172 basehttp log_message "GET /__debug__/render_panel/?store_id=19ee8dadf20a4bada14c4b10bfd0438d&panel_id=TemplatesPanel HTTP/1.1" 200 48251
+INFO 2024-03-23 14:07:17,015 basehttp log_message "GET /__debug__/render_panel/?store_id=19ee8dadf20a4bada14c4b10bfd0438d&panel_id=CachePanel HTTP/1.1" 200 1413
+INFO 2024-03-23 14:07:18,227 basehttp log_message "GET /__debug__/render_panel/?store_id=19ee8dadf20a4bada14c4b10bfd0438d&panel_id=SignalsPanel HTTP/1.1" 200 2152
+INFO 2024-03-23 14:07:20,237 basehttp log_message "GET /__debug__/render_panel/?store_id=19ee8dadf20a4bada14c4b10bfd0438d&panel_id=ProfilingPanel HTTP/1.1" 200 34516
+INFO 2024-03-23 14:10:55,326 autoreload trigger_reload C:\Users\wolfy\Downloads\django_framework\seminars\seminar_03\views.py changed, reloading.
+INFO 2024-03-23 14:10:56,439 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-23 14:10:58,175 basehttp log_message "GET /seminar_03/random_number/100 HTTP/1.1" 200 15916
