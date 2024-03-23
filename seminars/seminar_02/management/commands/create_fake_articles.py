@@ -24,13 +24,13 @@ class Command(BaseCommand):
         ○ флаг, указывающий, опубликована ли статья
         """
         authors = [author for author in Author.objects.all()]
-        for i in range(count):
-            data = {
-                'title': f'Title{i}',
-                'content': f'Content{i}',
-                'author': random.choice(authors),
-                'category': f'Category{i}',
-                'views': random.randint(0, 100),
-                'is_published': random.choice([True, False])}
-            Article.create_article(data)
+        data = [Article(
+            title=f'Title{i}',
+            content=f'Content{i}',
+            author=random.choice(authors),
+            category=f'Category{i}',
+            views=random.randint(0, 100),
+            is_published=random.choice([True, False]))
+            for i in range(count)]
+        Article.objects.bulk_create(data)
         self.stdout.write(self.style.SUCCESS(f'Created {count} fake articles'))

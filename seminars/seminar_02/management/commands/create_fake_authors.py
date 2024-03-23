@@ -23,13 +23,12 @@ class Command(BaseCommand):
         ○ почта
         ○ биография
         ○ день рождения"""
-        for i in range(count):
-            Author.create_author(
-                first_name=f'Name {i}',
-                last_name=f'Last name {i}',
-                email=f'email{i}@mail.ru',
-                bio=f'Bio {i}',
-                birth_date=self.random_date()
-
-            )
+        data = [Author(
+            first_name=f'Name {i}',
+            last_name=f'Last name {i}',
+            email=f'email{i}@mail.ru',
+            bio=f'Bio {i}',
+            birth_date=self.random_date())
+            for i in range(count)]
+        Author.objects.bulk_create(data)
         self.stdout.write(self.style.SUCCESS(f'Created {count} fake authors'))
