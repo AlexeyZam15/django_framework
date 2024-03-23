@@ -26314,3 +26314,90 @@ INFO 2024-03-19 19:03:44,100 basehttp log_message "GET /admin/homework_02/produc
 INFO 2024-03-19 19:03:44,348 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 INFO 2024-03-19 19:03:47,263 basehttp log_message "GET /admin/homework_02/product/ HTTP/1.1" 200 21891
 INFO 2024-03-19 19:03:47,572 basehttp log_message "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-03-20 16:55:53,855 autoreload run_with_reloader Watching for file changes with StatReloader
+WARNING 2024-03-20 16:56:08,395 log log_response Not Found: /
+WARNING 2024-03-20 16:56:08,396 basehttp log_message "GET / HTTP/1.1" 404 2744
+INFO 2024-03-23 13:58:48,193 autoreload run_with_reloader Watching for file changes with StatReloader
+WARNING 2024-03-23 13:58:59,765 log log_response Not Found: /
+WARNING 2024-03-23 13:58:59,766 basehttp log_message "GET / HTTP/1.1" 404 12240
+INFO 2024-03-23 13:58:59,981 basehttp log_message "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2024-03-23 13:59:00,046 basehttp log_message "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2024-03-23 13:59:00,048 basehttp log_message "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+INFO 2024-03-23 13:59:00,139 basehttp log_message "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+INFO 2024-03-23 13:59:18,092 basehttp log_message "GET /seminar_04/ HTTP/1.1" 200 10010
+INFO 2024-03-23 13:59:45,294 basehttp log_message "GET /seminar_03/ HTTP/1.1" 200 10282
+INFO 2024-03-23 13:59:47,280 basehttp log_message "GET /seminar_04/games/ HTTP/1.1" 200 10872
+INFO 2024-03-23 13:59:57,737 views games_choose Выбрана игра "random_number", с количеством попыток: 100.
+INFO 2024-03-23 13:59:57,766 basehttp log_message "POST /seminar_04/games/ HTTP/1.1" 200 9972
+INFO 2024-03-23 13:59:57,810 basehttp log_message "GET /static/debug_toolbar/js/redirect.js HTTP/1.1" 200 48
+INFO 2024-03-23 14:00:03,649 basehttp log_message "GET /seminar_03/random_number/100 HTTP/1.1" 200 15911
+INFO 2024-03-23 14:06:08,735 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-23 14:06:23,542 basehttp log_message "GET /seminar_03/random_number/100 HTTP/1.1" 200 15912
+INFO 2024-03-23 14:06:27,205 basehttp log_message "GET /seminar_04/games/ HTTP/1.1" 200 10872
+INFO 2024-03-23 14:06:31,643 views games_choose Выбрана игра "random_number", с количеством попыток: 100.
+INFO 2024-03-23 14:06:31,672 basehttp log_message "POST /seminar_04/games/ HTTP/1.1" 200 9972
+INFO 2024-03-23 14:06:33,283 basehttp log_message "GET /seminar_03/random_number/100 HTTP/1.1" 200 15918
+INFO 2024-03-23 14:07:10,427 basehttp log_message "GET /__debug__/render_panel/?store_id=19ee8dadf20a4bada14c4b10bfd0438d&panel_id=SQLPanel HTTP/1.1" 200 115
+INFO 2024-03-23 14:07:14,396 basehttp log_message "GET /__debug__/render_panel/?store_id=19ee8dadf20a4bada14c4b10bfd0438d&panel_id=StaticFilesPanel HTTP/1.1" 200 33815
+INFO 2024-03-23 14:07:15,172 basehttp log_message "GET /__debug__/render_panel/?store_id=19ee8dadf20a4bada14c4b10bfd0438d&panel_id=TemplatesPanel HTTP/1.1" 200 48251
+INFO 2024-03-23 14:07:17,015 basehttp log_message "GET /__debug__/render_panel/?store_id=19ee8dadf20a4bada14c4b10bfd0438d&panel_id=CachePanel HTTP/1.1" 200 1413
+INFO 2024-03-23 14:07:18,227 basehttp log_message "GET /__debug__/render_panel/?store_id=19ee8dadf20a4bada14c4b10bfd0438d&panel_id=SignalsPanel HTTP/1.1" 200 2152
+INFO 2024-03-23 14:07:20,237 basehttp log_message "GET /__debug__/render_panel/?store_id=19ee8dadf20a4bada14c4b10bfd0438d&panel_id=ProfilingPanel HTTP/1.1" 200 34516
+INFO 2024-03-23 14:10:55,326 autoreload trigger_reload C:\Users\wolfy\Downloads\django_framework\seminars\seminar_03\views.py changed, reloading.
+INFO 2024-03-23 14:10:56,439 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-23 14:10:58,175 basehttp log_message "GET /seminar_03/random_number/100 HTTP/1.1" 200 15916
+INFO 2024-03-23 14:14:37,790 autoreload trigger_reload C:\Users\wolfy\Downloads\django_framework\seminars\seminar_03\urls.py changed, reloading.
+INFO 2024-03-23 14:14:38,912 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-23 14:14:44,914 basehttp log_message "GET /seminar_04/games/ HTTP/1.1" 200 10873
+INFO 2024-03-23 14:14:47,510 views games_choose Выбрана игра "coin", с количеством попыток: 5.
+INFO 2024-03-23 14:14:47,538 basehttp log_message "POST /seminar_04/games/ HTTP/1.1" 200 9952
+INFO 2024-03-23 14:14:56,256 basehttp log_message "GET /seminar_03/coin/5/ HTTP/1.1" 200 10725
+INFO 2024-03-23 14:15:00,371 autoreload trigger_reload C:\Users\wolfy\Downloads\django_framework\seminars\seminar_03\urls.py changed, reloading.
+INFO 2024-03-23 14:15:01,338 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-23 14:16:10,767 autoreload trigger_reload C:\Users\wolfy\Downloads\django_framework\seminars\homework_01\urls.py changed, reloading.
+INFO 2024-03-23 14:16:12,216 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-23 14:23:14,166 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 14:23:19,993 basehttp log_message "GET /seminar_03/articles/71/ HTTP/1.1" 200 15968
+INFO 2024-03-23 14:23:34,063 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 16:56:28,526 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-23 16:56:32,590 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 16:56:32,673 basehttp log_message "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+INFO 2024-03-23 16:56:32,673 basehttp log_message "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2024-03-23 16:56:51,735 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 16:57:19,204 basehttp log_message "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2024-03-23 16:57:19,209 basehttp log_message "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+INFO 2024-03-23 16:57:27,123 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 16:57:28,939 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 16:57:34,466 basehttp log_message "GET /__debug__/render_panel/?store_id=46258f913ace46e4ad0229a87c7e161b&panel_id=SQLPanel HTTP/1.1" 200 602405
+INFO 2024-03-23 16:58:06,481 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 16:58:08,211 basehttp log_message "GET /__debug__/render_panel/?store_id=8c622e10e5784bd5a2c2407902d7d44a&panel_id=SQLPanel HTTP/1.1" 200 602411
+INFO 2024-03-23 16:58:12,035 basehttp log_message "POST /__debug__/sql_select/ HTTP/1.1" 200 14841
+INFO 2024-03-23 16:58:20,581 basehttp log_message "POST /__debug__/sql_explain/ HTTP/1.1" 200 2119
+INFO 2024-03-23 16:58:47,705 basehttp log_message "GET /__debug__/render_panel/?store_id=8c622e10e5784bd5a2c2407902d7d44a&panel_id=StaticFilesPanel HTTP/1.1" 200 33815
+INFO 2024-03-23 16:58:48,111 basehttp log_message "GET /__debug__/render_panel/?store_id=8c622e10e5784bd5a2c2407902d7d44a&panel_id=TemplatesPanel HTTP/1.1" 200 7878
+INFO 2024-03-23 16:58:48,446 basehttp log_message "GET /__debug__/render_panel/?store_id=8c622e10e5784bd5a2c2407902d7d44a&panel_id=CachePanel HTTP/1.1" 200 1413
+INFO 2024-03-23 16:58:50,996 basehttp log_message "GET /__debug__/render_panel/?store_id=8c622e10e5784bd5a2c2407902d7d44a&panel_id=SignalsPanel HTTP/1.1" 200 2152
+INFO 2024-03-23 16:58:54,934 basehttp log_message "GET /__debug__/render_panel/?store_id=8c622e10e5784bd5a2c2407902d7d44a&panel_id=ProfilingPanel HTTP/1.1" 200 34537
+INFO 2024-03-23 16:59:03,051 basehttp log_message "GET /seminar_03/authors/ HTTP/1.1" 200 12541
+INFO 2024-03-23 16:59:05,537 basehttp log_message "GET /__debug__/render_panel/?store_id=b4a9621daf4244c199f74bcefa12e8a5&panel_id=SQLPanel HTTP/1.1" 200 420785
+INFO 2024-03-23 16:59:23,466 basehttp log_message "GET /__debug__/render_panel/?store_id=b4a9621daf4244c199f74bcefa12e8a5&panel_id=SignalsPanel HTTP/1.1" 200 2152
+INFO 2024-03-23 16:59:25,018 basehttp log_message "GET /__debug__/render_panel/?store_id=b4a9621daf4244c199f74bcefa12e8a5&panel_id=ProfilingPanel HTTP/1.1" 200 34533
+INFO 2024-03-23 18:52:03,593 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-23 18:52:06,564 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 18:52:07,089 basehttp log_message "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2024-03-23 18:52:08,055 basehttp log_message "GET /seminar_03/authors/ HTTP/1.1" 200 12541
+INFO 2024-03-23 18:52:09,293 basehttp log_message "GET /seminar_04/games/ HTTP/1.1" 200 10872
+INFO 2024-03-23 18:52:10,313 basehttp log_message "GET /seminar_03/articles/ HTTP/1.1" 200 17970
+INFO 2024-03-23 18:52:17,938 basehttp log_message "GET /homework_03/ HTTP/1.1" 200 10010
+INFO 2024-03-23 18:52:19,403 basehttp log_message "GET /homework_03/products/ HTTP/1.1" 200 13590
+INFO 2024-03-23 18:52:20,535 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 14380
+INFO 2024-03-23 18:52:22,227 basehttp log_message "GET /homework_03/clients/ HTTP/1.1" 200 12667
+INFO 2024-03-23 18:52:22,983 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 14380
+INFO 2024-03-23 18:52:24,640 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 14379
+INFO 2024-03-23 18:53:51,237 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 18259
+INFO 2024-03-23 18:53:54,254 basehttp log_message "GET /homework_03/products/ HTTP/1.1" 200 13587
+INFO 2024-03-23 18:53:56,127 basehttp log_message "GET /homework_03/clients/ HTTP/1.1" 200 12667
+INFO 2024-03-23 18:53:59,379 basehttp log_message "GET /homework_03/clients/167/ HTTP/1.1" 200 10693
+INFO 2024-03-23 18:54:01,357 basehttp log_message "GET /homework_03/client/167/ordered_products/ HTTP/1.1" 200 11374
+INFO 2024-03-23 18:54:03,762 basehttp log_message "GET /seminar_03/orders/client/167/ HTTP/1.1" 200 11655
+INFO 2024-03-23 18:54:06,379 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 18259

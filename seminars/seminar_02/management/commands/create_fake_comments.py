@@ -22,10 +22,10 @@ class Command(BaseCommand):
         """
         authors = [author for author in Author.objects.all()]
         articles = [article for article in Article.objects.all()]
-        for i in range(count):
-            data = {
-                'author': random.choice(authors),
-                'article': random.choice(articles),
-                'comment': f'Comment_{i}'}
-            Comment.objects.create(**data)
+        data = [Comment(
+            author=random.choice(authors),
+            article=random.choice(articles),
+            comment=f'Comment_{i}')
+            for i in range(count)]
+        Comment.objects.bulk_create(data)
         self.stdout.write(self.style.SUCCESS(f'{count} fake comments created!'))
