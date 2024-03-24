@@ -29,6 +29,7 @@
         </form>
     </div>
 </div>
+{% if comments %}
 <p>
     <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseComments"
             aria-expanded="false" aria-controls="collapseComments">
@@ -81,4 +82,7 @@
         </section>
     </div>
 </div>
+{% else %}
+<p>Комментариев нет</p>
+{% endif %}
 {% endblock %}
