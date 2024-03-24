@@ -26401,3 +26401,137 @@ INFO 2024-03-23 18:53:59,379 basehttp log_message "GET /homework_03/clients/167/
 INFO 2024-03-23 18:54:01,357 basehttp log_message "GET /homework_03/client/167/ordered_products/ HTTP/1.1" 200 11374
 INFO 2024-03-23 18:54:03,762 basehttp log_message "GET /seminar_03/orders/client/167/ HTTP/1.1" 200 11655
 INFO 2024-03-23 18:54:06,379 basehttp log_message "GET /seminar_03/orders/ HTTP/1.1" 200 18259
+INFO 2024-03-24 16:27:31,561 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-24 16:29:16,514 autoreload run_with_reloader Watching for file changes with StatReloader
+INFO 2024-03-24 16:29:50,486 autoreload run_with_reloader Watching for file changes with StatReloader
+ERROR 2024-03-24 16:29:56,494 log log_response Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 92, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\conf\__init__.py", line 98, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2024-03-24 16:29:56,579 basehttp log_message "GET / HTTP/1.1" 500 145
+ERROR 2024-03-24 16:29:56,858 log log_response Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 92, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\conf\__init__.py", line 98, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2024-03-24 16:29:56,860 basehttp log_message "GET /favicon.ico HTTP/1.1" 500 145
+INFO 2024-03-24 16:32:15,337 autoreload run_with_reloader Watching for file changes with StatReloader
+ERROR 2024-03-24 16:32:19,160 log log_response Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 92, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\conf\__init__.py", line 98, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2024-03-24 16:32:19,172 basehttp log_message "GET / HTTP/1.1" 500 145
+ERROR 2024-03-24 16:32:19,403 log log_response Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 92, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolfy\Downloads\django_framework\venv\Lib\site-packages\django\conf\__init__.py", line 98, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2024-03-24 16:32:19,406 basehttp log_message "GET /favicon.ico HTTP/1.1" 500 145
+INFO 2024-03-24 16:32:49,492 autoreload run_with_reloader Watching for file changes with StatReloader
+WARNING 2024-03-24 16:32:54,397 log log_response Not Found: /
+WARNING 2024-03-24 16:32:54,397 basehttp log_message "GET / HTTP/1.1" 404 179
+WARNING 2024-03-24 16:32:54,469 log log_response Not Found: /favicon.ico
+WARNING 2024-03-24 16:32:54,470 basehttp log_message "GET /favicon.ico HTTP/1.1" 404 179
+WARNING 2024-03-24 16:32:58,508 log log_response Not Found: /
+WARNING 2024-03-24 16:32:58,509 basehttp log_message "GET / HTTP/1.1" 404 179
+INFO 2024-03-24 16:33:19,054 basehttp log_message "GET /homework_01/ HTTP/1.1" 200 167
+INFO 2024-03-24 16:34:23,752 basehttp log_message "GET /homework_01/about HTTP/1.1" 301 0
+INFO 2024-03-24 16:34:23,762 basehttp log_message "GET /homework_01/about/ HTTP/1.1" 200 286
