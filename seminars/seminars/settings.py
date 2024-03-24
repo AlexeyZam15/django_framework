@@ -19,6 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = "key"
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -92,6 +93,13 @@ WSGI_APPLICATION = 'seminars.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": "db.sqlite3",
+#     }
+# }
 
 DATABASES = {'default': {
     'ENGINE': 'django.db.backends.mysql',
@@ -173,18 +181,18 @@ LOGGING = {
             'formatter': 'verbose',
             'encoding': 'utf-8',
         },
-        'seminar_01_file': {
-            'class': 'logging.FileHandler',
-            'filename': './log/seminar_01/django.log',
-            'formatter': 'verbose',
-            'encoding': 'utf-8',
-        },
-        'homework_01_file': {
-            'class': 'logging.FileHandler',
-            'filename': './log/homework_01/django.log',
-            'formatter': 'verbose',
-            'encoding': 'utf-8',
-        }
+        # 'seminar_01_file': {
+        #     'class': 'logging.FileHandler',
+        #     'filename': './log/seminar_01/django.log',
+        #     'formatter': 'verbose',
+        #     'encoding': 'utf-8',
+        # },
+        # 'homework_01_file': {
+        #     'class': 'logging.FileHandler',
+        #     'filename': './log/homework_01/django.log',
+        #     'formatter': 'verbose',
+        #     'encoding': 'utf-8',
+        # }
     },
     'loggers': {
         'django': {
@@ -192,12 +200,12 @@ LOGGING = {
             'level': 'INFO',
         },
         'seminar_01': {
-            'handlers': ['console', 'seminar_01_file'],
+            'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,
         },
         'homework_01': {
-            'handlers': ['console', 'homework_01_file'],
+            'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,
         },
