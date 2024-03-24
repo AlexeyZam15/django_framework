@@ -110,7 +110,7 @@ from seminar_04.forms import CommentForm
 
 
 def get_articles(request, author_id=None):
-    articles = Article.objects.order_by('-date_published').all()
+    articles = Article.objects.filter(is_published=True).order_by('-date_published').all()
     if author_id:
         author = get_object_or_404(Author, pk=author_id)
         articles = Article.objects.filter(author=author).all()
