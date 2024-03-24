@@ -21,7 +21,7 @@ class Command(BaseCommand):
         ○ комментарий
         """
         authors = [author for author in Author.objects.all()]
-        articles = [article for article in Article.objects.all()]
+        articles = [article for article in Article.objects.filter(is_published=True).all()]
         data = [Comment(
             author=random.choice(authors),
             article=random.choice(articles),
